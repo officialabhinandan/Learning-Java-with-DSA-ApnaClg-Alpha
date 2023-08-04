@@ -1,0 +1,49 @@
+Bit Manipulation:- Bit Manipulation is a techniques od working with 0 and 1 bits as a computer only understand these two bits. In mathematics we 
+do work in Decimal number system(0-9, base 10) but computer work in binary number system(0 and 1, base 2).
+
+Bitwise Operators:- The binary operators are,
+Binary AND Operator(&):-   0 & 0 = 0 , 1 & 0 = 0, 0 & 1 = 0, 1 & 1 = 1.
+for example, 5 + 6 = 11 in decimal but 5 AND 6 or 101 AND 110 = 100(binary) or 4(decimal)
+
+Binary OR Operator(|):-   0 | 0 = 0 , 1 | 0 = 1, 0 | 1 = 1, 1 | 1 = 1.
+for example, 5 + 6 = 11 in decimal but 5 OR 6 or 101 OR 110 = 111(binary) or 7(decimal)
+
+Binary XOR Operator(^):-   0 ^ 0 = 0 , 1 ^ 0 = 1, 0 ^ 1 = 1, 1 ^ 1 = 0. 0 in case of same bit and 1 in case of different. 
+for example, 5 + 6 = 11 in decimal but 5 XOR 6 or 101 XOR 110 = 011(binary) or 3(decimal)
+
+Binary NOT Operator/Binary 1's complement(~):- ~ 0 = 1 and ~ 1 = 0; Applied on only one bit at a time.
+for example, in case 5 , 5 in binary is 101. Then ~5 should be ~101 = 010 or 2 in decimal theoritically. But in practically since we consider
+5 as a large number like 00000101 intead of just 101, here MSB (Most Significant Bit, the most left one) and all the 0s turns into 1. In this case 
+we need to use 2's complement method to find a negative number's complement which includes making 1's complementanf then adding 1 with it.
+so, decimal 5 = 00000101
+   1's complement of 5 = 11111010  (MSB=1, so negative number)
+now, again 1's complement + 1 = 00000101 + 1 = 00000110 = 6 in decimal
+Since MSB was 1/ negative number , so final answer is -6
+Similarly ~0 = -1 in decimal in 2's complement method 
+
+Binary Left Shift Operator(<<):- In case of binary representation of a decimal number a, the digits will be shifted in the left side by b places.
+for example, in case of 5<<2 , 5 is 101 in binary, 2places left shift means 10100. Now 5<<2 will be 16+4=20. It also has a formula,
+a<<b =  a * 2^b in case of 5<<2 , a=5, b=2. According to the formula, 5 * 2^2 = 5*4 = 20. Helpful for competitive programming.
+
+Binary Right Shift Operator(>>):-  In case of binary representation of a decimal number a, the digits will be shifted in the right side by b places.
+for example, in case of 6>>1 , 6 is 110 in binary, 2places right shift means 011. Now 6>>1 will be 3. It also has a formula,
+a<<b =  a / 2^b in case of 6>>1 , a=6, b=1. According to the formula, 6 / 2^1 = 6/2 = 3. Helpful for competitive programming.
+
+In case of a number even or odd using Bit Manipulation we notice that, the LSB(Least Significant Bit, most right digit) should be 1 in case of 
+odd numbers and 0 in case of even numbers. To extract the LSB we perform and operation of the number with BitMask 1. If the number is odd then 
+LSB will be 1 and AND Operation with BitMask 1 will be 1. But in case of even the LSB is 0 and AND operation with BitMask 1 is 0.
+   
+Get Bit:- To find a bit in a binary number. Here we do 1<<i. Here we need to perform the same process like odd even but here we need 1 in ith position.
+Then we perform AND operation with the number. if n & (1<<i) == 0 then then the number is 0, otherwise 1.
+
+Set Bit:- To set the ith bit to 1. To set that we perform OR opration of the number n with 1 in ith postion. For example,
+if n | (1<<i) , it will set the ith bit into 1, irrespective of its original bit.  
+
+Clear Bit:- Here the concept just opposite of set bit. We'll make the ith postion 0. We take ~(1<<i) because we need such a number where in the ith 
+position bit is 0 and the rests are 1. Then we do AND with n.
+
+Update Bit:- Here we can set bit 1 or 0 as instructed. That means it can performs both the functions if set bit and clear bit.
+                           
+
+
+  

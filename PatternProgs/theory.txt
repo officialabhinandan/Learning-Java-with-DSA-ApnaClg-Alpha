@@ -1,0 +1,8 @@
+Nested For Loops:-
+
+n, m --> User goven inputs
+for(int i=0; i<=n; i++){
+    for(int j=0; j<=m; j++){
+        prints something/performs some operations;
+    }
+}

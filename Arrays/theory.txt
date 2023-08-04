@@ -1,0 +1,12 @@
+Array: Array is a list of elements of the same type placed in a contiguous memory location.
+
+Creation of Array:
+dataType arrayName[] = new dataType[size]
+example: 
+int marks[] = new int[50];
+we use marks.length to find arrays length. It is a opertor, not a function.
+
+Array follows pass by reference techniques. That means any changes occured in the method will be reflected in the main method.
+
+Linear Search has O(n) time complexity.
+Binary Search is applied on a sorted array either ascending or in descending order. It's time complexity is O(log n). For any value of of n, the value of log n is always less than n.

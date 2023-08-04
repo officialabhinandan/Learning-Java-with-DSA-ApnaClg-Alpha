@@ -1,0 +1,22 @@
+Loops :-
+
+While loops:-
+
+while(Condition) {
+    perform any task or print something ;
+}
+
+For loops:-
+
+for(initialization; condition; updation){
+    statement/operation
+}
+
+Do While loops:-
+do{
+    //performs some operations/prints something;
+} while(conditions);
+
+//Break Statement:- We generally use break statement inside a loop to move out of the loop when a certain condition hits. For instance, print 1 to 10 but when user number reaches to 6 move out of the loop.
+
+// Continue Statement:- On the other hand we use continue statement inside a loop to skip an iterarion. For example, print 1 to 5 except 3. 

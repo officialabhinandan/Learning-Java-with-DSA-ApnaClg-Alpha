@@ -1,0 +1,18 @@
+Classes are the group of entities and Objects are the entities in the real world. We can also say that, classes are the logical entities and objects
+are the physical constructs which carry class's attributes and properties.
+Class is nothing but the blueprint of an object. Classes are consists of attributes/properties and behaviours/functions.
+
+An object is the real time entity of a class which has four characteristics Attribute, Behaviour, State and Identity.
+i) Attribute defined about the object.
+ii) Behaviour is how object react with the system.
+iii) State is a set of properties which can take different values 
+    in different times in the object's life. Generally an object has two states, live state and dead state.
+    Whenever object executes in an operation we consider it to be in live state, otherwise the object is in the dead state.
+iv) Identity is a unique property by which we can distinguish between two objects.
+
+So, class is nothing but the container where we collect attributes and behaviours of similar types of the objects. We can declare variables inside a 
+class. Those variables are called instance variables. These are nothing but the attributes of the objects.
+similarly we can define methods inside a class. Those methods are called instance methods. These are nothing but the behaviours of the objects.
+Then we make objects of class in the main method and access the attributes and behaviours of that particular class.
+
+

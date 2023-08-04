@@ -1,0 +1,43 @@
+Conditional Statements:-
+  --> If Else 
+  --> Else If
+  --> Ternary 
+  --> Switch Case
+
+If Else:- 
+if(condition){
+    Statement1 / Operation 1
+} else { 
+    Statement2 / Operation2
+}
+
+If Else If:-
+if(condition 1){
+    Statement1 / Operation 1
+} else if(condition 2) { 
+    Statement2 / Operation2
+}
+else { 
+    Statement3 / Operation3
+}
+
+Ternary Operator:-
+variable = condition ? Statement1 : Statement2;
+for example,
+int larger = (5>3) ? 5 : 3;
+String type = (5%2==0) ? "Even" : "Odd";
+
+Switch Case Statement:-
+switch(variables){
+    case 1: 
+    case 2:
+    case 3:
+    .
+    .
+    .
+    .
+    case n:
+    default: 
+}
+
+

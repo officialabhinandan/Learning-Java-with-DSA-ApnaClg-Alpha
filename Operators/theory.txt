@@ -1,0 +1,13 @@
+(a + b) This is an experssion or operation where a and b are operands
++ is a operator. Addition is occuring here. 
+
+
+
+Types of Operators:-
+    Arithmatic Operators(Binary/Unary)
+      Binary: Atleast 2 operands needed.(+, -, *, /, %). % is modulo returns remainder in a division
+      Unary: Only 1 operands needed. (++, --) Both are pre/post incre/decrement (a++/++a or a--/--a)
+    Relational Operators(==, !=, <, >, <=, >=)
+    Logical Operators (Logical AND: &&, Logical OR: ||, Logical NOT: !)
+    Bitwise Operators(Bit Manipulation)
+    Assignment Operators(=, +=, -=, *=, /=, %=)

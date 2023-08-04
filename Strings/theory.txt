@@ -1,0 +1,89 @@
+String is a data type to store any letter, word or sentence in the comouter memory. Java has an inbuit String class. By invoking String class we 
+make an object of string class and declare a string. String class's objects are immutable. That's why we often use StringBuilder and StringBuffer class.
+There are total two processes to declare a string.
+for example: 
+  Method 1: String str = "abcd";  
+  Method 2: String st = new String("pqrs");
+
+
+Method 1: We know that whenever we create an object it creates in the heap memory. But there is a special designated memory space for string in the computer
+memory called memory pool/string pool. If we declare any object using method 1, then control goes to memory pool and searches for the value is present or not.
+If present, then no new object is created. This method is called interning. The reference variable refers to that one. If not present, then object is created with the value and the
+reference variable will refer to that one. (see strinPrac.java line no 3) 
+
+Method 2: But in the 2nd method, whenever we use new keyword, control doesn't move to the memory pool. It directly creates the object in heap memory and reference variable 
+will refer to that one. (see strinPrac.java line no 4) 
+
+To calculate the length of a string we use .length() method after string length. In case of array length is a proparty/keyword. That's why we do not
+use () after .length.
+
+stringName.charAt(indexNo):- In string we use charAt method to identify a perticular character inside a string. For example, stringName.charAt(0).... find 0th index of the string.
+
+stringName1.equals(stringName2):- We use this method to compare two strings only based on their respective value, not on the objects created in the memory.
+This method returns boolean type.
+
+stringName1.compareTo(stringName2):- It compares two strings based on their alphabets using lexicographic method. It uses to compare multiple strings present in a string type array. 
+If it gives output 0 then, string1 = string 2   //lexicographic comparisons
+If it gives output >0 then, string1 > string 2  //lexicographic comparisons
+If it gives output <0 then, string1 < string 2  //lexicographic comparisons
+Another similar type of fucntion is comparetoIgnoreCase(). Here capital a and small a are treated as equal.
+
+Since string class's objects are immutable in nature, if we perform any operation on it to update it, it creates a whole new object in the heap memory 
+with the updated characteristics. Then the pointer points to the new one. In this way if we have to perform a series of operation(n times) on that 
+string again and again using for loop, it runs n times and each time it traverse the full length of the string and creates O(n^2) time complexity
+in the worst case. 
+To avoid this we often use the objects of the StringBuilder and StringBuffer classes to perform this operations as they are mutable. The sysntax for that are:-
+StringBuffer sbf = new StringBuffe("testing");
+StringBuilder sbl = new StringBuilder("again testing");
+Both of these clsses allow modification and do not make another object after it, alter the old one.
+StringBuilder or StringBuffer's type are not string type but we can convert them into string type using .toString() only if it is an object.
+For example it can't convert if we write,
+int a = 10; // here a is an int which is a premitive date type
+a.toString(); // Not possible
+but if we arite,
+Integer a = 10; // here a is an obj of Integer class
+a.toString(); // possible
+Similarly in case of char
+char ch = 'A'; 
+ch.toString(); // Not possible
+but if we arite,
+Character ch = 10; // here a is an obj of Character class
+ch.toString(); // possible
+
+We can perform almost all the operations using StringBuffer and StringBuilder, which we perform using String with added memory efficiency. Almost all the 
+methods of String class work fine with these two. 
+
+Difference between StringBuffer and StringBuilder
+
+Java provides three classes to represent a sequence of characters: String, The String class is an immutable class whereas StringBuffer and StringBuil The StringBuilder class is introduced since JDK 1.5.
+
+A list of differences between StringBuffer and StringBuilder are given bel
+
+1)StringBuffer is synchronized i.e. thread safe.
+
+It means two threads can't call the methods of StringBuffer simultaneously StringBuilder is non-synchronized i.e. not thread safe. It means two threads can call the methods of StringBuilder simultaneously.
+
+2)StringBuffer is less efficient than StringBuilder. StringBuilder is more efficient than StringBuffer.
+
+To split a string, we generally use String Tokenizer class or split string method. 
+In case of String Tokenizer class it is present in java.util package.
+
+Difference between Scanner and BufferReader Class in Java
+
+java.util.Scanner class is a simple text scanner which can parse primitive types and strings. It internally uses regular expressions to read different types.
+
+Java.io.BufferedReader class reads text from a character-input stream, buffering characters so as to provide fu
+
+In Scanner class if we call nextLine() method after any one of the seven nextXXX() method then the nextLine() de The nextXXX() methods are nextInt(), nextFloat(), nextByte(), nextShort(), nextDouble(), nextLong(), next().
+
+In BufferReader class there is no such type of problem.
+
+This problem occurs only for Scanner class, due to nextXXX() methods ignore newline character and nextLine() on] If we use one more call of nextLine() method between nextXXX() and nextLine(), then this problem will not occur See this for the corrected program. This problem is same as scanf() followed by gets() in C/C++. This problem can also be solved by using next() instead of nextLine() for taking input of strings as shown here.
+
+Other differences:
+
+BufferedReader has significantly larger buffer memory than Scanner.
+
+The Scanner has a little buffer (1KB char buffer) as opposed to the BufferedReader (8KB byte buffer),
+ but it's BufferedReader is a bit faster as compared to scanner because scanner does parsing of input data and BufferedRes
+

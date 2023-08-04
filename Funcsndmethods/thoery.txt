@@ -1,0 +1,37 @@
+funtion syntax:-
+returnType name(){
+    //funtion body(performs some assigned task)
+    //return statement;
+}
+
+syntax for fuction with parameters:-
+returnType name(type param1, type param2){
+    //body
+    return statement;
+}
+
+Functions/Methods in java also occupies memeory like variables in the call stack as stack frame. Variables of a method occupies memories inside of the particular stack frame taken by that method.
+Methods occupies call stack whenever a method is called by main method and vacants the memory as soon as it executes the return statements.
+Java always calls by value.
+C++ follows call by reference.
+
+Method are of two types: i) User defined methos (the method we wrote)
+                        ii) Predefined/Inbuilt method (Mthods under Math class such as poe, sqrt, max etc or Scanner class's next(), nextInt() methods)
+
+
+Method Scope: A variable declared inside a method is valid only inside that method. We can't directly use that variable outside that method.
+for example,  public static void sum(int a, int b){
+    int sum = a+b;
+    System.out.println(sum); //correct
+}  System.out.println(sum); //incorrect
+
+Similarly, 
+Block Scope: A variable declared inside a block is valid only inside that block. We can't directly use that variable outside that block.
+for example,  public static void sum(int a, int b){
+    int sum = a+b;
+    {
+        int c = sum + 1;
+         System.out.println(c); //correct
+}     
+System.out.println(c); //incorrect  
+}  

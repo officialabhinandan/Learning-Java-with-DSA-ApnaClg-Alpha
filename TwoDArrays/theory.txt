@@ -1,0 +1,5 @@
+2D Array: 2D is array is same with the normal array but with two dimension which are represented by rows and columns. We treat it as a matrix form.
+
+In normal arrays, elements are stored in contiguous memory locations. But in case of a 2D array it stores in row major and column major. This is 
+applicable for computer memory, not in case of java. 
+In case of java, the 2D array divided into the numbers of the arrays and stores randomly inside the memory.
