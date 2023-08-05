@@ -2,7 +2,11 @@ Classes are the group of entities and Objects are the entities in the real world
 are the physical constructs which carry class's attributes and properties.
 Class is nothing but the blueprint of an object. Classes are consists of attributes/properties and behaviours/functions.
 
-An object is the real time entity of a class which has four characteristics Attribute, Behaviour, State and Identity.
+An object is the real time entity of a class which has four characteristics 
+--> Attribute
+--> Behaviour 
+--> State 
+--> Identity
 i) Attribute defined about the object.
 ii) Behaviour is how object react with the system.
 iii) State is a set of properties which can take different values 
@@ -15,4 +19,13 @@ class. Those variables are called instance variables. These are nothing but the 
 similarly we can define methods inside a class. Those methods are called instance methods. These are nothing but the behaviours of the objects.
 Then we make objects of class in the main method and access the attributes and behaviours of that particular class.
 
+Access Modifiers/Specifiers:- 
+
+Common properties of OOP is given below-
+--> Abstraction
+--> Encapsulation.
+--> Inheritance.
+--> Polymorphism
+
+Abstraction:- Abstraction is basically hiding of data. 
 
