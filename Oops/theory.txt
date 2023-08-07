@@ -27,5 +27,5 @@ Common properties of OOP is given below-
 --> Inheritance.
 --> Polymorphism
 
-Abstraction:- Abstraction is basically hiding of data. 
+Abstraction:- Abstraction is basically hiding of data. to
 
