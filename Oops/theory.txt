@@ -129,6 +129,7 @@ Remember, JVM is used to run the java program, but we need compiler separately t
 Java is not a fully Object Oriented Programming language. Because of the usage of static keyword and the presense wrapper class.
 By using static keyword, we can bypass the method of the making of object to access any member.
 All the primary datatypes present in java (int, char, float, long....) have a predefined class each called wrapper class.
+That's why java is not a fully object oriented programming language.
 
 
 
