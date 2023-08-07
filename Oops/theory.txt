@@ -2,6 +2,76 @@ Classes are the group of entities and Objects are the entities in the real world
 are the physical constructs which carry class's attributes and properties.
 Class is nothing but the blueprint of an object. Classes are consists of attributes/properties and behaviours/functions.
 
+Create objects in Java:-
+As you all know, in Java, a class provides the blueprint for objects, you create an object from a class. 
+Basically class act as a container where we collect attribute and behaviour of objects. By using instance or object of a class we can able to access member of class.
+Using new Keyword : Using new keyword is the most basic way to create an object. This is the most common way to create an object in java. Almost 99% of objects are created in this way. By using this method we can call any constructor we want to call (no argument or parameterized constructors).
+
+
+// Java program to illustrate creation of Object 
+// using new keyword 
+
+public class A  
+{ 
+    String name = "king"; 
+    public static void main(String[] args)  
+    { 
+        // Here we are creating Object of  
+        // A using new keyword 
+        A  obj = new  A(); 
+        System.out.println(obj.name); 
+    } 
+}
+Output
+King
+
+We can able to create n number of object or instance for a class. For every instance of a class separate copy of instance member will create.
+
+class A
+{
+void add(int a,int b)
+{
+int s;
+s=a+b;
+System.out.println(s);
+}
+public static void main(String args[])
+{
+A x=new A();
+A y=new A();
+x.add(10,12);
+y.add(3,4);
+}
+}
+
+Output:
+22
+7
+In the above example , we can find out two objects for class A and for every object separate copy of add method created.
+We can able to invoke one member of a class n number of times as per our requirement by using same object reference.
+
+class A
+{
+void add(int a,int b)
+{
+int s;
+s=a+b;
+System.out.println(s);
+}
+public static void main(String args[])
+{
+A x=new A();
+x.add(10,2);
+x.add(3,5);
+}
+}
+
+Output
+12
+8
+In the above example we invoke add method twice by using same reference of class A.
+
+
 An object is the real time entity of a class which has four characteristics 
 --> Attribute
 --> Behaviour 
@@ -27,5 +97,38 @@ Common properties of OOP is given below-
 --> Inheritance.
 --> Polymorphism
 
-Abstraction:- Abstraction is basically hiding of data. to
+Abstraction:- Abstraction is basically hiding of data implementation.For example, to drive a car we do not need to know about the mechanism of the car.
+We just need to know thae attribute and behaviours of the car. Similarly to use any object we don't require to memory representation of the object.
+We just need to know the attribute and behaviours of the object. It's only about knowing essential things.
+
+Encapsulation:- Encapsulation represents wrapping of data and put into a single unit. Similarly Whenever we create an object of a class all the 
+properties of that class are wrapped together within the object. That's why they are abstructed from user. Encapsulation is the reason and 
+abstruction is the result. 
+
+Inheritance:- It indicates the resuability of code. If we want to access the property of any other member we need a permission. That permission is taken 
+to Inherite. Here in OOPs if we want to redefine the properties of a class in another class, then sub class must require to take a permission from 
+the parent class. That is called Inheritance. 
+
+Polymorphism:- After getting the permission when we redefine the proparties, that is nothing but Polymorphism. It means single interface multiple access.
+There are two kinds of Polymorphism, we can implement in OOPs. Compiletime/Static Polymorphism and Runtime/Dynamic Polymorphism.
+
+i) Compile time/Static Polymorphism:- Here Inheritance is not required. It can be achieved within a single class. Within a single class if we define 
+one thing more than one time, that is the example of complie time Polymorphism. For example, method overloading and contructor overloading.
+
+ii) Runtime/Dynamic Polymorphism:- Here we require more than one class. If we define the proparties of one class within another class, that is runtime Polymorphism. For that
+inheritance is mandatory. example, method overriding.
+
+P.S. Without implementing runtime Polymorphism, the use of inheritance is nothing but misuse of inheritance. For example a sub or child class Inherites
+its super or parent class but doesn't redefine the proparties of the super class. Then what is the essesce of inheritance? 
+
+Java Program is platform independent but JVM and JDK are platform dependent. 
+JDK = JRE + Compiler(Dev tools)          // JDK = Java Developmient kit; JRE = Java Runtime Environmen
+JRE = JVM + Core Java API Libraries      // JVM = Java Virtual Machine; API = Application Program interface
+Remember, JVM is used to run the java program, but we need compiler separately to complie a java program which comes with JDK.
+
+Java is not a fully Object Oriented Programming language. Because of the usage of static keyword and the presense wrapper class.
+By using static keyword, we can bypass the method of the making of object to access any member.
+All the primary datatypes present in java (int, char, float, long....) have a predefined class each called wrapper class.
+
+
 
