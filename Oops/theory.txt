@@ -131,5 +131,54 @@ By using static keyword, we can bypass the method of the making of object to acc
 All the primary datatypes present in java (int, char, float, long....) have a predefined class each called wrapper class.
 That's why java is not a fully object oriented programming language.
 
+In java basically we work with 4 types of variable:-
+--> Instance variable
+--> Local variable
+--> Reference variable
+--> Static variable
+Instance variable are those which are attribute of an object. We can declare inside a class.
+Local variable are declared inside a method, constructor or block.
+Reference refers to an object. We use it at the time of creating the object.
+Static variable or class variable can be accessed without creating the object.
+
+METHOD OVERLOADING:-
+If a class has multiple methods having same name but different signatures, it is known as Method Overloading. Signature of a method indicates no of parameter as well as type of parameter.
+In the concept of method overloading at compile time by knowing parameter control recognize which method will invoke, that’s why method overloading is the example of compile time polymorphism.
+If we have to perform only one operation, having same name of the methods increases the readability of the program.
+Overloading allows different methods to have the same name, but different signatures where the signature can differ by the number of input parameters or type of input parameters or both. Overloading is related to compile-time (or static) polymorphism.
+public class Sum { 
+      // Overloaded sum(). This sum takes two int parameters 
+    public int sum(int x, int y) 
+    { 
+        return (x + y); 
+    } 
+    // Overloaded sum(). This sum takes three int parameters 
+    public int sum(int x, int y, int z) 
+    { 
+        return (x + y + z); 
+    } 
+    // Overloaded sum(). This sum takes two double parameters 
+    public double sum(double x, double y) 
+    { 
+        return (x + y); 
+    } 
+     
+    public static void main(String args[]) 
+    { 
+        Sum s = new Sum(); 
+        System.out.println(s.sum(10, 20)); 
+        System.out.println(s.sum(10, 20, 30)); 
+        System.out.println(s.sum(10.20, 20.50)); 
+    } 
+}
+Output
+30
+60
+30.70
+
+
+
+
+
 
 
