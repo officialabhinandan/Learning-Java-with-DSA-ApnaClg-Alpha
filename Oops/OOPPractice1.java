@@ -13,6 +13,10 @@ public class OOPPractice1 {
         p1.color = "black"; // we can also update the color by just calling the class variable/attribute
         System.out.println(p1.color);
         //System.out.println(p1.color = "black"); // or we can also write line 13 and 14 in a single line like line 15
+
+        Student s1 = new Student(); // object created for Student class and default constructor is invoked.
+        //System.out.println(s1.calculatePercentage(82, 81, 83));
+        s1.calculatePercentage(90, 91, 92);
     }
     
 }
@@ -33,6 +37,8 @@ class Student{
     float percentage;
 
     void calculatePercentage(int math, int phy, int chem){
-        percentage = (phy + chem + math)/3;
+       percentage = (phy + chem + math)/3;
+      //return percentage;
+      System.out.println(percentage);
     }
 }
