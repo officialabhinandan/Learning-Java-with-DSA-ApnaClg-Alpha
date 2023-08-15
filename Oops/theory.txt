@@ -349,7 +349,122 @@ Constructor(s) do not return any type while method(s) have the return type or vo
 Constructor is called only once at the time of Object creation while method(s) can be called any numbers of time.
 
 Copy Constructor:- We use copy constructor to copy the value of the instance member of one object within the instance member of another object of the same class.
- 
+
+In Java there are 57 keywords available. We use static foir memory management. We know that whenever we create instance or object of a class, for each object or instance
+separate copy of instance member is created. But if the member is static member, only one copy is created which can be shared by all the objects.
+The most important part is, to use static member of a class within the same class static member we don't require any object or class name. We can 
+use directly. But in case of different class we need to write className.memberName. Still we can use by creating object. That won't be wrong but that would be 
+unnecessary. In Java we can't assign any global variable, but using static we can ensure that.
+In Java inside a class we can be able to assign four types of static member. They are--
+--> Static Block
+--> Static Variable(also known as class variable)
+--> Static Method
+--> Static Class
+
+Static Block:- Generally it is used to initialize static variables. We can also perform other tasks too. e.g 
+ static {
+  //code
+ } 
+Usually every program starts running from the main method. But if we use static block, it invokes before the JVM loads the main. That means static runs
+before the main method. We can declare n numbers of static block and they are invoked asper their appearance. We don't require to call them, they are 
+automatically called before main method called.
+
+If we wish we can declare a class inside another class and the inner class can be declared as static. This is called static nested class.
+
+Sir's Notes on Static:-
+In Java, keywords are the reserved words that cannot be used as identifiers. In total there are 57 keywords in Java. One among them is “Static“. In this article, I will give you a brief insight into how static keyword in Java is applicable for various aspects of programming.
+Introduction to Static Keyword in Java
+In Java, static keyword is mainly used for memory management. It can be used with variables, methods, blocks and nested classes. It is a keyword which is used to share the same variable or method of a given class. Basically, static is used for a constant variable or a method that is same for every instance of a class. The main method of a class is generally labeled static.
+In order to create a static member (block, variable, method, nested class), you need to precede its declaration with the keyword static. When a member of the class is declared as static, it can be accessed before the objects of its class are created, and without any object reference.
+In Java programming language, static keyword is a non-access modifier and can be used for the following:
+Static Block
+Static Variable
+Static Method
+Static Classes
+
+Static Block
+If you need to do the computation in order to initialize your static variables, you can declare a static block that gets executed exactly once, when the class is first loaded. Take a look at the below Java program to understand the usage of Static Block.
+
+// Java program to demonstrate the use of static blocks
+import java.util.*;
+public class A{
+// static variable
+static int j = 10;
+static int n;
+ // static block
+static {
+System.out.println("Static block initialized.");
+n = j * 8;
+}
+ public static void main(String[] args)
+{
+System.out.println("Inside main method");
+System.out.println("Value of j : "+j);
+System.out.println("Value of n : "+n);
+}
+}
+
+Output:
+Static block initialized
+Inside main method
+Value of j:10
+Value of n : 80
+
+Static Variable
+When you declare a variable as static, then a single copy of the variable is created and divided among all objects at the class level. Static variables are, essentially, global variables. Basically, all the instances of the class share the same static variable. Static variables can be created at class-level only.
+import java.util.*;
+ public class A
+{
+// static variable
+static int j = n();
+ // static block
+static {
+System.out.println("Inside the static block");
+}
+ // static method
+static int n() {
+System.out.println("from n ");
+return 20;
+}
+ // static method(main !!)
+public static void main(String[] args)
+{
+System.out.println("Value of j : "+j);
+System.out.println("Inside main method");
+}
+}
+When you execute the above program, it will execute static block and the variable in order as defined in the above program.
+
+Output:
+from n
+Inside the static block
+Value of j: 20
+Inside main method
+
+Static Methods
+When a method is declared with the static keyword, it is known as a static method. The most common example of a static method is the main( ) method.  Methods declared as static can have the following restrictions:
+They can directly call other static methods only.
+They can access static data directly.
+Static Class
+A class can be made static only if it is a nested class. Nested static class doesn’t need a reference of Outer class. In this case, a static class cannot access non-static members of the Outer class. Let’s take an example to understand how it works
+public class NestedExample{
+private static String str= "king"
+//Static class
+static class MyNestedClass{
+//non-static method
+public void disp(){
+System.out.println(str);
+}
+}
+public static void main(String args[]){
+NestedExample.MyNestedClass obj = new NestedExample.MyNestedClass();
+obj.disp();
+ }
+}
+Output:
+king
+
+
 
 
 
