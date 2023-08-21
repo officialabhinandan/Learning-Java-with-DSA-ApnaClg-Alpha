@@ -1,4 +1,4 @@
-String is a data type to store any letter, word or sentence in the comouter memory. Java has an inbuit String class. By invoking String class we 
+String is a data type to store any letter, word or sentence in the computer memory. Java has an inbuit String class. By invoking String class we 
 make an object of string class and declare a string. String class's objects are immutable. That's why we often use StringBuilder and StringBuffer class.
 There are total two processes to declare a string.
 for example: 
@@ -9,10 +9,10 @@ for example:
 Method 1: We know that whenever we create an object it creates in the heap memory. But there is a special designated memory space for string in the computer
 memory called memory pool/string pool. If we declare any object using method 1, then control goes to memory pool and searches for the value is present or not.
 If present, then no new object is created. This method is called interning. The reference variable refers to that one. If not present, then object is created with the value and the
-reference variable will refer to that one. (see strinPrac.java line no 3) 
+reference variable will refer to that one. (see stringPrac.java line no 3) 
 
 Method 2: But in the 2nd method, whenever we use new keyword, control doesn't move to the memory pool. It directly creates the object in heap memory and reference variable 
-will refer to that one. (see strinPrac.java line no 4) 
+will refer to that one. (see stringPrac.java line no 4) 
 
 To calculate the length of a string we use .length() method after string length. In case of array length is a proparty/keyword. That's why we do not
 use () after .length.
