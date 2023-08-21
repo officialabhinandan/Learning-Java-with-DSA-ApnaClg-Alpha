@@ -16,7 +16,7 @@ public class stringArrayProg {
         char strArr[] = str.toCharArray();
         
         System.out.println("Printing str after converting into a char array strArr[].........");
-        for(int i=0; i<strArr.length-1; i++){
+        for(int i=0; i<strArr.length; i++){
             //strArr[i] += 1; //can perform this type of modification if required
             System.out.print(strArr[i] + " ");
         } System.out.println();
