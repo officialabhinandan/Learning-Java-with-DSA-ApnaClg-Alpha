@@ -4,12 +4,12 @@
 package Strings;
 import java.util.Arrays;
 
-public class javaAnagramsmM1 {
+public class javaAnagramsM1 {
     public static void main(String args[]){
-       String str1 = "listen";
-       String str2 = "silent";
-    //    String str1 = "fire";
-    //    String str2 = "firee";
+    //    String str1 = "listen";
+    //    String str2 = "silent";
+       String str1 = "fire";
+       String str2 = "firo";
        System.out.println(isAnagrams(str1, str2)? "Anagrams" : "Not anagrams"); //print statement using ternary operator
 
     }
