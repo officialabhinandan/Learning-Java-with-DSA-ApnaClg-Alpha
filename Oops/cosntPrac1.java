@@ -2,11 +2,13 @@ package Oops;
 
 public class cosntPrac1 {
    public static void main(String args[]) {
+      System.out.println("This is the concept of constructor overloading which is also an example of Compile time/static polymorphism.");
       Student1 s1 = new Student1();
       Student1 s2 = new Student1("Rahul", 01);
       Student1 s3 = new Student1("Sonia", 02);
       Student1 s4 = new Student1("Priyanka");
       Student1 s5 = new Student1(4);
+
 
       // for student 1
       System.out.println(s1.name); // prints null bcz no value was assigned for name

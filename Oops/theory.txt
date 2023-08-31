@@ -349,6 +349,7 @@ Constructor(s) do not return any type while method(s) have the return type or vo
 Constructor is called only once at the time of Object creation while method(s) can be called any numbers of time.
 
 Copy Constructor:- We use copy constructor to copy the value of the instance member of one object within the instance member of another object of the same class.
+Copy constructpr are of two types, shallow copy constructor and deep copy constructor. Ref. search lazy copy in Google and read from stack overflow. 
 
 In Java there are 57 keywords available. We use static foir memory management. We know that whenever we create instance or object of a class, for each object or instance
 separate copy of instance member is created. But if the member is static member, only one copy is created which can be shared by all the objects.
