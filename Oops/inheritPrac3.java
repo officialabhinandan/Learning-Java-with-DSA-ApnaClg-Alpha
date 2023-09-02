@@ -1,4 +1,4 @@
-// Hierrarchial inheritance
+// Hierarchial inheritance
 package Oops;
 
 public class inheritPrac3 {
