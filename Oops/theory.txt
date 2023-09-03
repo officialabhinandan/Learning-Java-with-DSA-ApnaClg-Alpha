@@ -107,7 +107,165 @@ abstruction is the result.
 
 Inheritance:- It indicates the resuability of code. If we want to access the property of any other member we need a permission. That permission is taken 
 to Inherite. Here in OOPs if we want to redefine the properties of a class in another class, then sub class must require to take a permission from 
-the parent class. That is called Inheritance. 
+the parent class. That is called Inheritance. Inheritance is a "is a" relationship. For example if Tiger, Lion and Cat inherits Animal class, we can say
+Tiger is an Animal, Lion is an Animal and so on.
+But there is concept called Aggregation in java. If we use the reference of a class within another class, that is aggregation. By using reference of
+a class, we can call the instance variables and methods of that class into another class but can't redefine that. But using inheritance we can redefine.
+Aggregation is a "has a" realtionship. For example, Car has a engine, Engine has a motor etc.
+In case of inheritance, sub class can inherit all the members of super class like instance methods, variables except private members. But constructors are not method of 
+any class. So they can't be inherited by another class. But, one thing we need to remember that, if we create non argumented object of sub class or
+the non-argumented object of sub class using the refence of the super class then at first it'll invoke the default constructor of its super class.
+Then it'll invoke the default constructor of the sub class(own class).
+for example
+class Parent{
+    Parent(){  // default constructor of the super/parent class
+        // invokes at first
+    }
+}
+class Child{
+    Child(){ // default constructor of the sub/child class
+      // invokes at second after Parent
+    }
+    Child c = new Child(); // non-argumented
+    // invokes Parent() then Child()
+}
+The object/reference of sub class can redefine/invoke both the members of super and sub classess. But the object/reference of super class can't 
+redefine/invoke the members of the sub class but invoke only the super class.
+
+“Super can refer to sub but vice versa is not possible”-by using reference variable of super class we can able to create object of sub class
+but by using reference of sub class we can’t able to create object of super. After that by using that reference if we invoke any method which
+is present in both then version of sub will invoke but in case of variable version of super will invoke.  
+For example, (See inheritPrac5.java)
+
+Super Keyword in Java
+The super keyword in java is a reference variable that is used to refer parent class objects.  The keyword “super” came into the picture with the concept of Inheritance. It is majorly used in the following contexts:
+
+1. Use of super with variables: This scenario occurs when a derived class and base class has same data members. In that case there is a possibility of ambiguity for the JVM. We can understand it more clearly using this code 
+
+/* Base class vehicle */
+class Vehicle 
+{ 
+    int maxSpeed = 120; 
+} 
+  
+/* sub class Car extending vehicle */
+class Car extends Vehicle 
+{ 
+    int maxSpeed = 180; 
+  
+    void display() 
+    { 
+        /* print maxSpeed of base class (vehicle) */
+        System.out.println("Maximum Speed: " + super.maxSpeed); 
+    } 
+} 
+  
+/* Driver program to test */
+class Test 
+{ 
+    public static void main(String[] args) 
+    { 
+        Car small = new Car(); 
+        small.display(); 
+    } 
+} 
+Output:
+
+
+
+Maximum Speed: 120
+In the above example, both base class and subclass have a member maxSpeed. We could access maxSpeed of base class in subclass using super keyword.
+ 
+2. Use of super with methods: This is used when we want to call parent class method. So whenever a parent and child class have same named methods then to resolve ambiguity we use super keyword. This code snippet helps to understand the said usage of super keyword.
+
+/* Base class Person */
+class Person 
+{ 
+    void message() 
+    { 
+        System.out.println("This is person class"); 
+    } 
+} 
+  
+/* Subclass Student */
+class Student extends Person 
+{ 
+    void message() 
+    { 
+        System.out.println("This is student class"); 
+    } 
+  
+    // Note that display() is only in Student class 
+    void display() 
+    { 
+        // will invoke or call current class message() method 
+        message(); 
+  
+        // will invoke or call parent class message() method 
+        super.message(); 
+    } 
+} 
+  
+/* Driver program to test */
+class Test 
+{ 
+    public static void main(String args[]) 
+    { 
+        Student s = new Student(); 
+  
+        // calling display() of Student 
+        s.display(); 
+    } 
+} 
+Output:
+This is student class
+This is person class
+In the above example, we have seen that if we only call method message() then, the current class message() is invoked but with the use of super keyword, message() of superclass could also be invoked.
+ 
+3. Use of super with constructors: super keyword can also be used to access the parent class constructor. One more important thing is that, ‘’super’ can call both parametric as well as non parametric constructors depending upon the situation. Following is the code snippet to explain the above concept:
+
+/* superclass Person */
+class Person 
+{ 
+    Person() 
+    { 
+        System.out.println("Person class Constructor"); 
+    } 
+} 
+  
+/* subclass Student extending the Person class */
+
+class Student extends Person 
+{ 
+    Student() 
+    { 
+        // invoke or call parent class constructor 
+        super(); 
+  
+        System.out.println("Student class Constructor"); 
+    } 
+} 
+  
+/* Driver program to test*/
+class Test 
+{ 
+    public static void main(String[] args) 
+    { 
+        Student s = new Student(); 
+    } 
+} 
+Output:
+Person class Constructor
+Student class Constructor
+In the above example we have called the superclass constructor using keyword ‘super’ via subclass constructor.
+
+final keyword in java
+final keyword is used in different contexts. First of all, final is a non-access modifier applicable only to a variable, a method or a class.Following are different contexts where final is used.
+
+final variable::::::::::::::::::: to create constant variable
+final method:::::::::::::::::::  to prevent method overriding
+final class::::::::::::::::::::::::   to prevent inheritance
+
 
 Polymorphism:- After getting the permission when we redefine the proparties, that is nothing but Polymorphism. It means single interface multiple access.
 There are two kinds of Polymorphism, we can implement in OOPs. Compiletime/Static Polymorphism and Runtime/Dynamic Polymorphism.
@@ -120,6 +278,23 @@ inheritance is mandatory. example, method overriding.
 
 P.S. Without implementing runtime Polymorphism, the use of inheritance is nothing but misuse of inheritance. For example a sub or child class Inherites
 its super or parent class but doesn't redefine the proparties of the super class. Then what is the essesce of inheritance? 
+
+Abstraction and Encapsulation are seemed to be very similar but they have a basic difference. Abstraction is not only about data hiding (hiding
+the unnecessary data), but also about showing the important data to the user. On the other hand, Encapsulation wraps up the data and related functions 
+and implements data hiding with the help of access specifiers.
+We can implement the concept of Abstraction in OOPs in two types. 1
+1) Abstract class.
+2) Interface.
+To make an abstract class we need to write abstract keyword before a class name. In case of an abstract class, 
+i> We can't create an instance(object) of an abstract class. 
+ii> It can contain abstract as well as non abstract mehods. To write a abstract class:- abstract returnType funtionName(){ //code }.
+iii> It can have constructors. 
+
+Note:- Abstract method is a type of method which can only be declared inside an abstract class but cannot write its implementation inside the class.
+
+
+
+
 
 Java Program is platform independent but JVM and JDK are platform dependent. 
 JDK = JRE + Compiler(Dev tools)          // JDK = Java Developmient kit; JRE = Java Runtime Environmen

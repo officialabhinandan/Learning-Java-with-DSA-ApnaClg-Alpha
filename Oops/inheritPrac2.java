@@ -12,7 +12,6 @@ public class inheritPrac2 {
         
         Cars c = new Cars();
         c.maintenance(); // calls the overridden method
-
     }
     
 }
