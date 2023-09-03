@@ -9,6 +9,9 @@ public class inheritPrac2 {
         Nexon.speed = 120;
         System.out.println("The speed is " + Nexon.speed);
         Nexon.charging();
+        
+        Cars c = new Cars();
+        c.maintenance(); // calls the overridden method
 
     }
     
@@ -30,6 +33,9 @@ class Cars extends Vehicles{
     int speed;
     void insurance(){
         System.out.println("It requires car insurance for protection");
+    }
+    void maintenance(){   // method overriding (an example of runtime or dynamic polymorphism)
+        System.out.println("Need to go to the car mechanic for maintenance");
     }
 }
 
