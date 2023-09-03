@@ -10,7 +10,7 @@ class ByDebanjanSir2 {
         return a + b + c;
     }
 
-    float add(int a, float b){
+    float add(float a, float b){
         return a + b;
     }
 
@@ -35,7 +35,7 @@ class ByDebanjanSir2 {
         System.out.println("Printing Outputs:- ");
         System.out.println(ob.add(7, 2));
         System.out.println(ob.add(6, 3, 1));
-        System.out.println(ob.add(10, 12.5f));
+        System.out.println(ob.add((float)10.25, 12.5f));  // two diff ways of type casting into float
         System.out.println(ob.add(130.25, 7));
         System.out.println(ob.add(20000, 70000));
         System.out.println(ob.add("Abhinandan", 22));
