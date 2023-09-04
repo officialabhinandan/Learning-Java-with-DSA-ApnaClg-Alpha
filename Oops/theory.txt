@@ -264,11 +264,11 @@ In the above example we have called the superclass constructor using keyword ‘
 final keyword in java
 final keyword is used in different contexts. First of all, final is a non-access modifier applicable only to a variable, a method or a class.Following are different contexts where final is used.
 
-final variable::::::::::::::::::: to create constant variable
-final method:::::::::::::::::::  to prevent method overriding
-final class::::::::::::::::::::::::   to prevent inheritance
+🔴final variable::::::::::::::::::: to create constant variable
+🔴final method:::::::::::::::::::  to prevent method overriding
+🔴final class::::::::::::::::::::::::   to prevent inheritance
 
-Note: Mainmethod can be overridden in java. At the time of running, which main method(super class's or sub class's) will run, depends on the name of the
+🔴Note: Mainmethod can be overridden in java. At the time of running, which main method(super class's or sub class's) will run, depends on the name of the
 class we are using to run. 
 
 Polymorphism:- After getting the permission when we redefine the proparties, that is nothing but Polymorphism. It means single interface multiple access.
@@ -285,23 +285,35 @@ its super or parent class but doesn't redefine the proparties of the super class
 
 Abstraction and Encapsulation are seemed to be very similar but they have a basic difference. Abstraction is not only about data hiding (hiding
 the unnecessary data), but also about showing the important data to the user. On the other hand, Encapsulation wraps up the data and related functions 
-and implements data hiding with the help of access specifiers.
-We can implement the concept of Abstraction in OOPs in two types. 1
+and implements data hiding with the help of access specifiers. Abstract class is basically hgiding the data implementation but showing the functionality
+to the user.
+We can implement the concept of Abstraction in OOPs in two types. 
 1) Abstract class.
 2) Interface.
 To make an abstract class we need to write abstract keyword before a class name. In case of an abstract class, 
-i> We can't create an instance(object) of an abstract class. 
-ii> It can contain abstract as well as non abstract mehods. To write a abstract class:- abstract returnType funtionName(){ //code }.
+i> We can't create an instance(object) of an abstract class.That means it can't be instantaniated. We can only inherit the class. 
+ii> It can contain abstract as well as non abstract, static and final methods. To write a abstract class:- abstract returnType funtionName(){ //code }.
 iii> It can have constructors. 
 
-Note:- Abstract method is a type of method which can only be declared inside an abstract class but cannot write its implementation inside the class.
+🔴Note:- Abstract method is a type of method which can be declared as well as defined asper requirement inside an abstract class but cannot write 
+its implementation inside the class. By using abstract classes we collect the common proparties of same type of classes. If a class inherit an 
+abstract class, it is the responsibility of that class to override/redefine each and every abstract method present in that particular abstract 
+super class. We may not create an abstract method inside an abstract class but that won't make any sense. That will be the misuse of abstract class.
+We can assign any number of abstract method inside an abstract class(from 0 to infinity). But if we declare atleast 1 abstract method, that class
+must be declared as abstract. By using abstract class we can achieve 0 to 100% abstraction. But using interface we get 100% abstraction.
+
+Since, we can't create the object of an abstract class, we can call the non-abstract method of that class using two ways.
+i) We can create the object of the sub-class which is inherited the abstract class. By using that object we can easily access the non-abstract 
+method of the abstract class.
+ii) On the other hand we can make that method static and call it by simply using className.methodName() 
+
+🔴 Even main method can also be inside an abstract class as a non-abstract method.
 
 
 
-
-
+🛑🛑🛑🛑
 Java Program is platform independent but JVM and JDK are platform dependent. 
-JDK = JRE + Compiler(Dev tools)          // JDK = Java Developmient kit; JRE = Java Runtime Environmen
+JDK = JRE + Compiler(Dev tools)          // JDK = Java Development kit; JRE = Java Runtime Environment
 JRE = JVM + Core Java API Libraries      // JVM = Java Virtual Machine; API = Application Program interface
 Remember, JVM is used to run the java program, but we need compiler separately to complie a java program which comes with JDK.
 
