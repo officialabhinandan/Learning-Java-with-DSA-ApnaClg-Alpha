@@ -109,6 +109,8 @@ Inheritance:- It indicates the resuability of code. If we want to access the pro
 to Inherite. Here in OOPs if we want to redefine the properties of a class in another class, then sub class must require to take a permission from 
 the parent class. That is called Inheritance. Inheritance is a "is a" relationship. For example if Tiger, Lion and Cat inherits Animal class, we can say
 Tiger is an Animal, Lion is an Animal and so on.
+
+
 But there is concept called Aggregation in java. If we use the reference of a class within another class, that is aggregation. By using reference of
 a class, we can call the instance variables and methods of that class into another class but can't redefine that. But using inheritance we can redefine.
 Aggregation is a "has a" realtionship. For example, Car has a engine, Engine has a motor etc.
@@ -266,6 +268,8 @@ final variable::::::::::::::::::: to create constant variable
 final method:::::::::::::::::::  to prevent method overriding
 final class::::::::::::::::::::::::   to prevent inheritance
 
+Note: Mainmethod can be overridden in java. At the time of running, which main method(super class's or sub class's) will run, depends on the name of the
+class we are using to run. 
 
 Polymorphism:- After getting the permission when we redefine the proparties, that is nothing but Polymorphism. It means single interface multiple access.
 There are two kinds of Polymorphism, we can implement in OOPs. Compiletime/Static Polymorphism and Runtime/Dynamic Polymorphism.
