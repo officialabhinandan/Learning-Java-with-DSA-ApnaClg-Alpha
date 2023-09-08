@@ -32,7 +32,7 @@ class Javalang extends OOPLang{      // Child class
         characteristics();  // calls the method of the sub class
         super.characteristics(); // calls the method of the super class
 
-        System.out.println("Calls the vaue of a mentioned in the super class: " + super.a);
+        System.out.println("Calls the value of a mentioned in the super class: " + super.a);
         System.out.println("Calls the value of the a mentioned in the sub class: " + a);
 
 

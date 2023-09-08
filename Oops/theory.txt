@@ -335,6 +335,20 @@ by default.
 Since Java 8, we can have default and static methods in an interface.
 Since Java 9, we can have private methods in an interface.
 
+🟡🟠🔴 Difference between Abstract class and Interface:-
+
+⚪ In case of abstract class we use the keyword 'abstract' and in case of interface we use 'interface' keyword.
+⚪ Abstract class can has abstract method as well as non-abstract method. But before Java 8 all the methods of an interface are public and abstract.
+⚪ Within abstract class to declare a variable public, static and final we need to write public, static and final in front of them, but within an interface
+   all the variable are by default public, static and final.
+⚪ Using abstract class we can achieve 0 to 100% abstraction, but using interface before Java 8 we could achieve 100% abstraction.
+⚪ Using interface we can achieve multiple inheritance, but using abstract class can’t achieve that.
+⚪ In abstract class constructor can exist, but in case of interface it is not possible. 
+
+🟡🟠🔴 Similarities between Abstract class and Interface:-
+⚪ By using both we can achieve abstraction.
+⚪ For both we can’t be able to create object.
+
 
 
 🛑🛑🛑🛑
