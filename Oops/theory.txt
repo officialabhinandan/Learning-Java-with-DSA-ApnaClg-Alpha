@@ -136,7 +136,10 @@ redefine/invoke the members of the sub class but invoke only the super class.
 
 “Super can refer to sub but vice versa is not possible”-by using reference variable of super class we can able to create object of sub class
 but by using reference of sub class we can’t able to create object of super. After that by using that reference if we invoke any method which
-is present in both then version of sub will invoke but in case of variable version of super will invoke.  
+is present in both then version of sub will invoke but in case of variable version of super will invoke. That means if we make the object of sub class
+using the reference of the super class, that can call all the overridden and non overridden method of the super class. But in case of overridden method
+the overrided version of the sub class will be invoked. But we can't call the non overridden method of the sub class. To call that we need to make
+the object of the sub class using the reference of the super class.
 For example, (See inheritPrac5.java)
 
 Super Keyword in Java
@@ -285,18 +288,18 @@ its super or parent class but doesn't redefine the proparties of the super class
 
 Abstraction and Encapsulation are seemed to be very similar but they have a basic difference. Abstraction is not only about data hiding (hiding
 the unnecessary data), but also about showing the important data to the user. On the other hand, Encapsulation wraps up the data and related functions 
-and implements data hiding with the help of access specifiers. Abstract class is basically hgiding the data implementation but showing the functionality
+and implements data hiding with the help of access specifiers. Abstract class is basically hiding the data implementation but showing the functionality
 to the user.
 We can implement the concept of Abstraction in OOPs in two types. 
 1) Abstract class.
 2) Interface.
 To make an abstract class we need to write abstract keyword before a class name. In case of an abstract class, 
 i> We can't create an instance(object) of an abstract class.That means it can't be instantaniated. We can only inherit the class. 
-ii> It can contain abstract as well as non abstract, static and final methods. To write a abstract class:- abstract returnType funtionName(){ //code }.
+ii> It can contain abstract as well as non abstract, static and final methods. To write a abstract method:- abstract returnType funtionName(){ //code }.
 iii> It can have constructors. 
 
-🔴Note:- Abstract method is a type of method which can be declared as well as defined asper requirement inside an abstract class but cannot write 
-its implementation inside the class. By using abstract classes we collect the common proparties of same type of classes. If a class inherit an 
+🔴Note:- Abstract method is a type of method which can be declared but can’t be defined inside an abstract class but cannot write 
+its implementation inside that class. By using abstract classes we collect the common proparties of same type of classes. If a class inherit an 
 abstract class, it is the responsibility of that class to override/redefine each and every abstract method present in that particular abstract 
 super class. We may not create an abstract method inside an abstract class but that won't make any sense. That will be the misuse of abstract class.
 We can assign any number of abstract method inside an abstract class(from 0 to infinity). But if we declare atleast 1 abstract method, that class
@@ -308,6 +311,29 @@ method of the abstract class.
 ii) On the other hand we can make that method static and call it by simply using className.methodName() 
 
 🔴 Even main method can also be inside an abstract class as a non-abstract method.
+
+🟡🟠🔴
+Inheritance is the blueprint of a class. In has mainly two jobs to perform in Java.  
+1) To implement multiple inheritance in Java. It is the 5th type of inheritance which can be implemeted by default in c++ using class. But in Java we
+need to take the help of interface.
+2) To achieve 100% or total abstraction. In case of abstract class if we keep any non-abstract method inside an abstract class we can't achieve total
+abstraction. To do that we need to declare all the methods abstract inside a abstract class. But in case of inteface we always get total abstraction.
+
+🔴 Basic str of an Interface:- To declare an interface we use interface keyword before its name. When a class inherits another, we write 
+implements. if an interface inherits another intergace we use extends. Class can inherit interface but the opposite is not true. 
+
+🔴 Basic characteristics of an Interface:-
+i) All methods of an interface are public, abstract and without implementation(Only initialization but not definition).
+ii) They are used to achieve total abstraction.
+iii) Variables in the interface are final, public and static by defalut.
+iV) A class can inherit more than one interface.
+v) It can't be instantaniated.(Can't make object of an interface).
+vi) It is also a "IS-A" relationship like class.
+
+The class inherits an interface must inherit all the methods publicly present inside the interface as all the methods are public and abstract 
+by default.
+Since Java 8, we can have default and static methods in an interface.
+Since Java 9, we can have private methods in an interface.
 
 
 
