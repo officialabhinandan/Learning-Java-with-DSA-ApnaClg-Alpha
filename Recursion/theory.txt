@@ -1,0 +1,26 @@
+Basically recursion indicates function calls itself with respect to a base condition. (Untill the base condition turns true)
+
+🔴🟠🟡 Difference between Iteration and Recursion:- 
+i) Iteration is a concept of loop running again and again. Recursion is function calling itself untill a base condition is satisfied.
+ii) In case of iteration the loop runs again and again untill the condition is false. But in recursion function calls itself repeatedly untill
+the base condition is true or satisfied. 
+iii) Iteration is used when the code size is large, but recursion is used when the code size is small. 
+iv) Iteration takes less time, but recursion take more time because to solve recusion we have to consider stack. The recursion function itself. Whenever
+function calls after every call the function returns some value and we have to store the value into the stack. 
+
+Stack is a abstract data type/structure. As their is no physical data structure named stack in the computer memory unlike arrays, graphs and linked lists, we
+call stack an abstract data structure. We just imoplement some logic on the physical data structures like arrays and call them stack. A stack follows
+LIFO (Last In First Out) and FILO (First In Last Out) strategy. Here insertion and deletion of elements occurs only from TOP. 
+
+We generally use the concept of stack to understand the implementation of recursion. In case of recursion, each time the method calls itself an 
+output is generated, but eventually when the base condition is satisfied it returns an single output in the main function. To understand that we use 
+stack data structure.
+
+In simple word, recursion is a method of solving a computational problem where the solution depends on solutions to smaller instances of the same 
+problem. Here we move from the top to bottom towards the base case and similarly returning the answer in the opposite direction.
+
+
+🔴🟠🟡 Stack Overflow :- If we work with a very large number of dataset or if we performs numerous recursion calls so that. the computer memory 
+inside the call stack gets full. Then we get an error called stack overflow error. To prevent this we must need to have a base case in our recursive 
+function to know the exact time of terminating the calling of the recursion function. Otherwise after the call stack memory being full, eventually
+our program will be crashed.
