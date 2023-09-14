@@ -24,3 +24,8 @@ problem. Here we move from the top to bottom towards the base case and similarly
 inside the call stack gets full. Then we get an error called stack overflow error. To prevent this we must need to have a base case in our recursive 
 function to know the exact time of terminating the calling of the recursion function. Otherwise after the call stack memory being full, eventually
 our program will be crashed.
+
+In case of multiple recursion call at a single step, we get a tree like structure as shown in the stack analysis for fibonacci series picture.
+Where space complexity is O(n) and time complexity is O(2^n) which is very big as well as bad and makes the program slow. To solve this, we'll use
+the concept of Dynamic programming in future. Where we'll store the result of a recursive call which is already calcuated once and reuse it again and 
+again to reduce the number of recursion call in the memory. 
