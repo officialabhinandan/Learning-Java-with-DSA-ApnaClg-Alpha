@@ -34,7 +34,7 @@ public class javaAnagramsM2 {
         }
         return true;  // to avoid dead code warning at i++ and avoid early terminating of the loop we write true in this way.
         /*  if we write return true and false inside the if else condition as soon as it encounters one of the return statement(true/false) it'll
-        move out of the loop and terminate the loop and make the i++ logic a dead code because the loop won't be able to gotothe next iteration. */
+        move out of the loop and terminate the loop and make the i++ logic a dead code because the loop won't be able to go to the next iteration. */
 
 
     }
