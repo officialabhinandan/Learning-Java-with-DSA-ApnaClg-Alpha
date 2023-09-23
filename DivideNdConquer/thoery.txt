@@ -1,0 +1,10 @@
+Divide and conquer is a process of dividing a large problem into many smaller parts and getting solution of the small problems. Then add those 
+small solutions to get the final solution ofthe large problem.  
+Upto now we've studied 3 types sorting algorithms(Bubble Sort, Insertion Sort and Selection Sort) and an inbuilt sorting method(arrayName.sort()). 
+Now we are going to learn Merge Sort and Quick Sort based on divide and conquer method.
+The time complexity is similar with inbuilt sorting method which is O(logn).
+
+Merge Sort:- Approah --> Step 1 >> To divide.
+                         Step 2 >> Sort the individual parts of the arrayName
+                         Step 3 >> Merge those part accordingly with the help of a temporary array
+                    
