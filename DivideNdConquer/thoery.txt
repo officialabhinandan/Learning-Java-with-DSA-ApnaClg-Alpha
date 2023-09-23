@@ -7,4 +7,6 @@ The time complexity is similar with inbuilt sorting method which is O(logn).
 Merge Sort:- Approah --> Step 1 >> To divide.
                          Step 2 >> Sort the individual parts of the arrayName
                          Step 3 >> Merge those part accordingly with the help of a temporary array
+
+Merge Sort is a dept-first approach/method. 
                     
