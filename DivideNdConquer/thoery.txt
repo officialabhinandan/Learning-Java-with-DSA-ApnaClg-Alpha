@@ -8,5 +8,22 @@ Merge Sort:- Approah --> Step 1 >> To divide.
                          Step 2 >> Sort the individual parts of the arrayName
                          Step 3 >> Merge those part accordingly with the help of a temporary array
 
-Merge Sort is a dept-first approach/method. 
+Merge Sort is a dept-first approach/method. Merge Sort's time complexity id O(logn) and space complexity is O(n).
+
+Quick Sort:- Here time complexity is O(logn) in normal case but in worst case scenario the time complexity is O(n^2). Sapce complexity is O(1).
+Quick sort algorithm is based on pivot and partition method which is nothing but an another variant of pivot and partition method. We can choose
+any element as pivot and divide other elements based on the pivot. To be precised, once we choose our pivot element, we keep the greater elements 
+in the right side of that element and lesser elements in the left side of the array.
+Generally we consider the last element of the array as a pivot.
+
+Here the approach towards the solution of the quick sort will be,
+Step 1 >> Choose the pivot element.
+Step 2 >> Arrange the other elements based on the pivot.
+Step 3 >> Finding the original position of the pivot if the array is sorted.
+Step 3 >> Recursive call for quick sort (left) and (right) simultanously untill it hits the base condition.
+Step 4 >> At the base condition there will be only 1 element inside the array. That means the array is sorted and return. 
+
+There is a worst case time complexity in quick sort where pivot is largest or smallest among all the elements present in an array. So if the array
+is already sorted in ascending or descending order the pivot will be at starting or end of the array. Then time complexity will be O(n^2).
+
                     

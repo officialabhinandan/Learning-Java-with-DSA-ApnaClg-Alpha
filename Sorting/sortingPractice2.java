@@ -18,7 +18,7 @@ public class sortingPractice2 {
         // inclusive and ei
         // is non inclusive so 0 to 3 means 0th index to 2nd index.
         // to sort in the reverse order we use Collections.reverseOrder() where reverse
-         Arrays.sort(arr, Collections.reverseOrder()); // order is a method under
+         Arrays.sort(arr, Collections.reverseOrder()); // reverseOrder() is a method under
         // Collections class/framework. That's why we need to import java.util.Collections;
         Arrays.sort(arr, 0, 3, Collections.reverseOrder()); // Collections.reverseOrder() method doesn't work on int,
                                                             // that's why we need to convert
@@ -30,6 +30,6 @@ public class sortingPractice2 {
         }
     }
 
-    // public static
+    
 
 }
