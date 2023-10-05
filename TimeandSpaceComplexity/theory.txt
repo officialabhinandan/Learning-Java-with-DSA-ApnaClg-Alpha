@@ -1,0 +1,18 @@
+Time Complexity:- Time complexity is defined in terms of how many times it takes to run a given algorithm, based on the length of the input. 
+Time complexity is not a measurement of how much time it takes to execute a particular algorithm because such factors as programming language,
+ operating system, and processing power are also considered.
+
+Time complexity is a type of computational complexity that describes the time required to execute an algorithm. The time complexity of an 
+algorithm is the amount of time it takes for each statement to complete. As a result, it is highly dependent on the size of the processed data.
+ It also aids in defining an algorithm's effectiveness and evaluating its performance.
+
+Order Complexity Analysis:- Amount of space and time taken up by an algorithm as function of input size. Not the actual time taken.
+In case of linear time complexity, time is directly proportinal to n. So the time complexity is O(n). In case of linear search the time complexity vs
+input size create a linear graph as well as a linear function or relation with a eqaution of straight line(ax+b).
+Time complexity, y = an + b = O(n) , where n is an variable. 
+In case of an sorted array the time complexity is always constant. So the time complexity vs input size graph will be a constant y value graph
+Here, time complexity, y = kx = O(k) , where k is a constant.
+
+For very small input size, linear time complexity algorithm is more efficient than constant time algorithm. But in case of worst case and huge input 
+size, it just gets reversed. 
+In casew of Big O notation, it provides an upperbound. That means it gives the maximum opper bound limit of time complexity 
