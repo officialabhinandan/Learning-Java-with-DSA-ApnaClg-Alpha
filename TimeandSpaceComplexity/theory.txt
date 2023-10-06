@@ -1,18 +1,42 @@
-Time Complexity:- Time complexity is defined in terms of how many times it takes to run a given algorithm, based on the length of the input. 
+🔴🟠🟡 Time Complexity:- Time complexity is defined in terms of how many times it takes to run a given algorithm, based on the length of the input. 
 Time complexity is not a measurement of how much time it takes to execute a particular algorithm because such factors as programming language,
  operating system, and processing power are also considered.
 
-Time complexity is a type of computational complexity that describes the time required to execute an algorithm. The time complexity of an 
+🔴🟠🟡 Time complexity is a type of computational complexity that describes the time required to execute an algorithm. The time complexity of an 
 algorithm is the amount of time it takes for each statement to complete. As a result, it is highly dependent on the size of the processed data.
  It also aids in defining an algorithm's effectiveness and evaluating its performance.
 
-Order Complexity Analysis:- Amount of space and time taken up by an algorithm as function of input size. Not the actual time taken.
+🔴🟠🟡Order Complexity Analysis:- Amount of space and time taken up by an algorithm as function of input size. Not the actual time taken.
 In case of linear time complexity, time is directly proportinal to n. So the time complexity is O(n). In case of linear search the time complexity vs
 input size create a linear graph as well as a linear function or relation with a eqaution of straight line(ax+b).
 Time complexity, y = an + b = O(n) , where n is an variable. 
 In case of an sorted array the time complexity is always constant. So the time complexity vs input size graph will be a constant y value graph
 Here, time complexity, y = kx = O(k) , where k is a constant.
 
-For very small input size, linear time complexity algorithm is more efficient than constant time algorithm. But in case of worst case and huge input 
+🔴🟠🟡 For very small input size, linear time complexity algorithm is more efficient than constant time algorithm. But in case of worst case and huge input 
 size, it just gets reversed. 
-In casew of Big O notation, it provides an upperbound. That means it gives the maximum opper bound limit of time complexity 
+In case of Big O notation, it provides an upperbound. That means it gives the maximum opper bound limit of time complexity(worst case). The program can 
+take less time than the limit, but never exit the limit.
+
+🔴🟠🟡 To find the time complexity from the equation of Bio O, we need to ignore the constants and take the maximum term of the n.
+For example, f(n) = a(n^2) + blogn + c,
+                               ⚪ Here we ignore the constants like a, b and c.
+                               ⚪ The highest teerm of n is n^2.
+So the time complexity of the function will be O(n^2). Refer to 🛑Cormen's🛑 book for more info related to time complexity.
+So, f(n) = O(g(n)) 
+or, lim {|f(n)|/g(n)} < infinity (where n tends to infinity). --> Big O notation's eq.
+
+🔴🟠🟡 Big Ω Notation:- Just like Big O Notation symbols worst came time complexity and provides the upper bound, Big Ω Notation represents Best 
+time complexity and provides the lower limit. The means the program can run with more time complexity than the limit provided by the Big Ω Notation, but
+can't run with less than that. 
+
+🔴🟠🟡 Big Θ Notation:- It is used to represent the average bound. When upper bound and lower bound are equal than we call it big Θ.
+
+🛑 There is also small O/Θ/Ω. It depends on how tightly or loosely we calculate time complexity. If we calculate very tightly or accurately it called 
+Big O/Θ/Ω and vice versa. 
+🛑🛑 Generally the time complexity ranges between O(1) constant time complexity to O(2^n) exponential time complexity.
+ It goes like: Best --> O(1)<O(logn)<O(n)<O(n^2)<<O(2^n) Worst-->. 
+🛑🛑🛑 Exponential time complexity we write when we write the code of recursion. To optimize that we use a technique called memorization which
+  comes under dynamic programming(DP). Using DP we can reduce the time complexity upto O(n^2)/O(n). But for very less number of inputs we don't need that.
+   
+
