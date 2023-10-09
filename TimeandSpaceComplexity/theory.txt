@@ -1,6 +1,6 @@
-🔴🟠🟡 Time Complexity:- Time complexity is defined in terms of how many times it takes to run a given algorithm, based on the length of the input. 
-Time complexity is not a measurement of how much time it takes to execute a particular algorithm because such factors as programming language,
- operating system, and processing power are also considered.
+🔴🟠🟡 Time Complexity:- Time complexity is defined in terms of how much times it takes to run a given algorithm, based on the length of the input. 
+Time complexity is not a measurement of how much time it takes to execute a particular algorithm because such factors depends on the programming language,
+ operating system, and processing power.
 
 🔴🟠🟡 Time complexity is a type of computational complexity that describes the time required to execute an algorithm. The time complexity of an 
 algorithm is the amount of time it takes for each statement to complete. As a result, it is highly dependent on the size of the processed data.
@@ -38,5 +38,19 @@ Big O/Θ/Ω and vice versa.
  It goes like: Best --> O(1)<O(logn)<O(n)<O(n^2)<<O(2^n) Worst-->. 
 🛑🛑🛑 Exponential time complexity we write when we write the code of recursion. To optimize that we use a technique called memorization which
   comes under dynamic programming(DP). Using DP we can reduce the time complexity upto O(n^2)/O(n). But for very less number of inputs we don't need that.
-   
 
+🔴🟠🟡 Space Complexity:- There are two types of memories inside the computer memory. 
+i) Stack memory (Here function call happenes and we create call stack)
+ii) Heap memory (As soon as we declare any variable/array/object, our program allocates some memories inside the computer memory. The relation between
+occupying memeory with respect to the input size is called space complexity).
+Space complexity = inpute space + auxiliary space. For example, in case of merge sort we use auxiliary/temporary array of the same size.
+
+🛑 Generally between time and space complexity we prefer time more than space unless space constraint is applied specially.
+
+🔴🟠🟡 Bubble Sort Time Complexity Analysis:- The worst case comes in Bubble Sort time complexity comes when the array is already sorted in 
+reverse direction. In both the case(base and worst), the time complexity will be O(n²). Because in best case when the array is already sorted in the 
+samw direction, the internal swapping may not be performed but the outer two loops will run n times each, where i is used to track the index of the array
+and j is used is tracked an element and its next element at a time for checking the probability of swapping.
+
+🔴🟠🟡 In case of optimized bubble sort where we use a boolean variable to track wheather the swapping task is performing or not at a single turn,
+the best case time complexity is O(n) and worst case is O(n²). See photos for reference.

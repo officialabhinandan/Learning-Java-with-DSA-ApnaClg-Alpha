@@ -23,7 +23,7 @@ public class binaryStringProb {
         }
         */
         // or we can also write in this ways 
-        printBinaryStr(n-1, newStr+"0", 0);  // wheather lastPlace is o or 1, we always write it, so writing outside if-else loop
+        printBinaryStr(n-1, newStr+"0", 0);  // wheather lastPlace is 0 or 1, we always write it, so writing outside if-else loop
         if(lastPlace == 0){
              printBinaryStr(n-1, newStr+"1", 1);
         }

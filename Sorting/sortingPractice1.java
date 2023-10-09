@@ -28,23 +28,24 @@ public class sortingPractice1 {
     //time complexity O(n^2). Not optimized.
     public static void bubbleSort(int a[]){
         for(int i=0; i<a.length-1; i++){ //here i is no of turns
-            int swap = 0;  //in case the array is already sorted from starting
+            int swap = 0;  //in case the array is already sorted from starting. We can also use a boolean var(boolean isswap == false)
             for(int j=0; j<a.length-1-i; j++){
                 if(a[j] > a[j+1]){
                     //swap - with or without using 3rd variable is possible
                     int temp = a[j];
                     a[j] = a[j+1];
                     a[j+1] = temp;
-                    swap++;   //to know wheather the array is sorted or not
-                }
+                    swap++;   //to know wheather the array is sorted or not. In case of boolean var swap = true;                }
 
                 if(swap==0){  //to keep the time complexity O(n) in case of a already sorted array. Optimized bubble sort code for already sorted array.
-                    break;
+                    break;    // in case of boolean if(isswap == false){ break; }
                 }
             }
 
         }
     }
+
+    
 
     //tine complexity - O(n^2)
     public static void selectionSort(int a[]){
