@@ -54,3 +54,10 @@ and j is used is tracked an element and its next element at a time for checking 
 
 🔴🟠🟡 In case of optimized bubble sort where we use a boolean variable to track wheather the swapping task is performing or not at a single turn,
 the best case time complexity is O(n) and worst case is O(n²). See photos for reference.
+
+🔴🟠🟡 Recursion is of two types generally. One is linear recursion where a main function calls itself again and again until the base condition is 
+satisfied. Another one is divide and conquer recursion like merge sort where a recursive function breaks itselft into small recursive parts and solves 
+those parts and then accumulate the results and returns to the main function. This is called recurrence equation.
+We use two different methods to calculate two different types of recursions.
+⚪ Total work done:- This method is used for linear recursion. Here, (total work done = no of calls * work done per call) 
+⚪ Recurrence Equation:- We use here for divide and conquer recursion. For example, f(n) = f(n/2) + f(n/2) ....... Function calls like a tree type structure.
