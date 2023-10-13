@@ -61,3 +61,5 @@ those parts and then accumulate the results and returns to the main function. Th
 We use two different methods to calculate two different types of recursions.
 ⚪ Total work done:- This method is used for linear recursion. Here, (total work done = no of calls * work done per call) 
 ⚪ Recurrence Equation:- We use here for divide and conquer recursion. For example, f(n) = f(n/2) + f(n/2) ....... Function calls like a tree type structure.
+
+🛑 Space Complexity = maximum depth(height of the call stack) * memory inr each cell.

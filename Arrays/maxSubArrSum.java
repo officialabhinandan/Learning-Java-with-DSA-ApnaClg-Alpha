@@ -36,7 +36,7 @@ public class maxSubArrSum {
 
     }
 
-    // here time complexity is O(n^2). It is comparaively optimized. It is Prefix sum approach.
+    // here time complexity is O(n^2). It is comparatively optimized. It is Prefix sum approach.
     public static void printMaxSubArrSum2(int arr[]) {
         int maxSum = Integer.MIN_VALUE;
         int currentSum = 0;
