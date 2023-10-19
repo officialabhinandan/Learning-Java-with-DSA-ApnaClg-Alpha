@@ -1,0 +1,7 @@
+🔴🟠🟡 Backtracking: It is basically based on the concept of divide and conquer in recursion. Backtracking uses recursion to solve it's problems.
+It does so by exploring all the possiblities of any problem, unless it finds the best and feasible solution to it. Recursion occurs when a 
+function calls itself repeatedly to split a problem into smaller sub-problems, until it reaches the base case.
+
+Types of backtracking:- ⚪ Decision,
+                        ⚪ Optimization, 
+                        ⚪ Enumeration.
