@@ -2,6 +2,6 @@
 It does so by exploring all the possiblities of any problem, unless it finds the best and feasible solution to it. Recursion occurs when a 
 function calls itself repeatedly to split a problem into smaller sub-problems, until it reaches the base case.
 
-Types of backtracking:- ⚪ Decision,
-                        ⚪ Optimization, 
-                        ⚪ Enumeration.
+Types of backtracking related problem we solve:- ⚪ Decision, (Taking decision wheather the solution is possible or not)
+                        ⚪ Optimization, (Giving the most shortest/optimized path)
+                        ⚪ Enumeration.  (Giving all the possible solutions)
