@@ -26,7 +26,7 @@ public class bktrkInArr {
        }
        // logic
        arr[i] = val;
-       changeArr(arr, i+1, val+1);
-       arr[i] = arr[i] - 2;
+       changeArr(arr, i+1, val+1);  // func call setp.
+       arr[i] = arr[i] - 2;     // backtracking step.
     }
 }

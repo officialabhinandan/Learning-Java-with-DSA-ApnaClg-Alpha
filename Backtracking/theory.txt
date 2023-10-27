@@ -5,3 +5,15 @@ function calls itself repeatedly to split a problem into smaller sub-problems, u
 Types of backtracking related problem we solve:- ⚪ Decision, (Taking decision wheather the solution is possible or not)
                         ⚪ Optimization, (Giving the most shortest/optimized path)
                         ⚪ Enumeration.  (Giving all the possible solutions)
+
+🛑 Backtracking is always happens after function calls. In case of backtracking in arrays, both the time complexity and space complexity are O(n).
+
+🛑🛑 In case of finding the subsets of a string or an array if the length of the array/string is n, the number of subsets are 2^n. It is different from
+finding sub arrays. Here time complexity is O(n*2^n) and space complexity is O(n).
+
+🛑🛑🛑 Time complexity = (Total no of subsets * time required for one subset) [We need to cover n steps to hit the base case each time]
+                           (2^n * n) = O(n*2^n)   [Total no is subsets are 2^n because, if there is n elemets/charcaters in an array/string
+                                                    Each character has two choices(possible subsets), so multiplying 2*2*2*2.......n times = 2^n times]
+
+🛑🛑🛑🛑 In case of finding the permutations of a string, if a string has n characters, then the total number of peermutations will be n!. This 
+is an Enumeration type of backtracking.  
