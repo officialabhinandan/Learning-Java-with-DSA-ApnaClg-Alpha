@@ -16,4 +16,11 @@ finding sub arrays. Here time complexity is O(n*2^n) and space complexity is O(n
                                                     Each character has two choices(possible subsets), so multiplying 2*2*2*2.......n times = 2^n times]
 
 🛑🛑🛑🛑 In case of finding the permutations of a string, if a string has n characters, then the total number of peermutations will be n!. This 
-is an Enumeration type of backtracking.  
+is an Enumeration type of backtracking. Here, Time Complexity is O(n*n!).  
+
+🔴🟠🟡 N Queens problem:- In these type of problems, there are mainly three type of questions come is the interview.
+⚪ Either we have to give all the possible equations.
+⚪⚪ Or we need to find whether any possible solution exists or not and print one of them.
+⚪⚪⚪ Say how many possbile solutions are there.
+
+🔴🟠🟡 N Queens Problem:- Time complexity will be O(n!). Recurrence relation is [T(n) = n * T(n-1) + T(isSafe method)] = O(n!) 
