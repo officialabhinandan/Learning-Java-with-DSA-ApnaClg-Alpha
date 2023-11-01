@@ -6,7 +6,7 @@ public class nQueensWOAttack {
         // taking char 2D array
         char chessBoard[][] = new char[n][n];
 
-        // putting elemnets inside the chessBoard
+        // putting x/blanks inside the chessBoard
         for(int i=0; i<n; i++){
             for(int j=0; j<n; j++){
                 chessBoard[i][j] = 'x';

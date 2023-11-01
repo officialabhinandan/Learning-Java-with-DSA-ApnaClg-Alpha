@@ -15,7 +15,7 @@ finding sub arrays. Here time complexity is O(n*2^n) and space complexity is O(n
                            (2^n * n) = O(n*2^n)   [Total no is subsets are 2^n because, if there is n elemets/charcaters in an array/string
                                                     Each character has two choices(possible subsets), so multiplying 2*2*2*2.......n times = 2^n times]
 
-🛑🛑🛑🛑 In case of finding the permutations of a string, if a string has n characters, then the total number of peermutations will be n!. This 
+🛑🛑🛑🛑 In case of finding the permutations of a string, if a string has n characters, then the total number of permutations will be n!. This 
 is an Enumeration type of backtracking. Here, Time Complexity is O(n*n!).  
 
 🔴🟠🟡 N Queens problem:- In these type of problems, there are mainly three type of questions come is the interview.
@@ -24,3 +24,9 @@ is an Enumeration type of backtracking. Here, Time Complexity is O(n*n!).
 ⚪⚪⚪ Say how many possbile solutions are there.
 
 🔴🟠🟡 N Queens Problem:- Time complexity will be O(n!). Recurrence relation is [T(n) = n * T(n-1) + T(isSafe method)] = O(n!) 
+🔴🟠🟡 Grid Ways:- To find the ways of no of ways to reaach from (0,0) to (n-1, m-1) in an n*m grid matrix. Here normal time complexity using
+recursion is O(2^(n+m)) which is exponential and really bad time complexity. So to reduce it we use an permutations based mathematical formula
+and reduces it opto O(n+m), linear time complexity.
+🔴🟠🟡 Sudoku Solver:- It is a 9*9 grid internally divided into 9, 3*3 smaller grids similar to N Queens. Here some numbers between 1 to 9 are 
+randomely positioned. We need to fill the blank blocks with numbers between 1 to 9 under some certain conditions. Like the number we put in a particular
+block, can't be put anymore on that paticular row, column and grid where the block is situated. We just need to find one possible solution here. 
