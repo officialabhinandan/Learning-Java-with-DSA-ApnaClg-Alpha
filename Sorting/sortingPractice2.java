@@ -2,7 +2,7 @@ package Sorting;
 
 // import java.util.Arrays;
 // import java.util.Collections;
-import java.util.*; //to import al at a time.
+import java.util.*; //to import all at a time.
 
 public class sortingPractice2 {
     public static void main(String args[]) {

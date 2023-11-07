@@ -1,0 +1,39 @@
+🔴🟠🟡 ArrayList: ArrayList is an in-built, linear and dynamic data structure as well as a class available inside the ArrayList utility package. 
+So we have to  write import java.util.ArrayList; It is just like vectors in c+. It is a part of Java Collection Framework(JCF).
+
+⚪ The differece between array and arraylist is, array is static but arraylist is dynamic. That means once we declare the size of the array we can't change it later. But 
+arraylist is dynamic in size, where we can extend the size of the same arraylist later if necessary. It doesn't come with size contraint unlike array.
+⚪⚪ In case of array, we can store both primitive (int, float, String, boolean and more...) and non-primitive (e.g. object of Integer class) data types.
+Whereas, in arraylist, we can only store non-primitive data types like object of Integer class etc.
+
+🔴🟠🟡 Java Collection Framework (JCF):- Java Collection Framework is a collection of some classes and interfaces inside Java, by which we can implement
+inbuilt data structures. In fact, here we didn't build the ArrayList from the scratch by writing the logic of its variable size and other proparties,
+we just used it from JCF where it is previously built for developers to use directly.
+
+🔴🟠🟡 Operations we can perform by suing ArrayList:-
+
+⚪ Add Element O(1)
+⚪ Get Element O(1)
+⚪ Remove Element O(n)
+⚪ Set Element at Index O(n)
+⚪ Contains Element O(n)
+
+In case of array, to access the elements present in each index we need to use index of array arr[i]. But here [] is not required. Rather we can
+access the same using .get method. Otherwise Arrays and ArrayList are almost same. All the functions we performed inside an array, we can perform 
+it here too. 
+
+To find the length of an ArrayList, we use .size() method which returns size in integer type. In case of array we use .length is a proparty but 
+here .size() is a method. Even we can iterate here just like array. 
+
+To sort an ArrayList we can implement all the available sorting techniques(bubble, selection, insertion, counting, merge and quick) just like arrays.
+But when we use inbuilt sorting method we use Collections.sort() method to sort in ascending order. Here Collections is a class under java utility 
+package.
+
+🛑 We need to remember that, Collections is a class under java.util package but Collection is an interface. Here to sort an arraylist we use Collections
+class. 
+
+🔴🟠🟡 The implementation of arraylists in the computer memory happens exactly similar with arrays. When we define an arraylist or we write
+ArrayList<Integer> list = new ArrayList<>(); it creates an arraylist(or array) of a particular size in the memory. When we access the list
+indirectly or internally we access the array. Whenever the arraylist is filled, Java internally creates a new array of double size of the previous 
+array inside the memory and copies all the elements from the previous array. The old array automatically is deleted from the memory.
+

@@ -35,7 +35,7 @@ can't run with less than that.
 🛑 There is also small O/Θ/Ω. It depends on how tightly or loosely we calculate time complexity. If we calculate very tightly or accurately it called 
 Big O/Θ/Ω and vice versa. 
 🛑🛑 Generally the time complexity ranges between O(1) constant time complexity to O(2^n) exponential time complexity.
- It goes like: Best --> O(1)<O(logn)<O(n)<O(n^2)<<O(2^n) Worst-->. 
+ It goes like: Best --> O(1)<O(logn)<O(n)<O(n^2)<<O(2^n) --> Worst. 
 🛑🛑🛑 Exponential time complexity we write when we write the code of recursion. To optimize that we use a technique called memorization which
   comes under dynamic programming(DP). Using DP we can reduce the time complexity upto O(n^2)/O(n). But for very less number of inputs we don't need that.
 
@@ -62,5 +62,5 @@ We use two different methods to calculate two different types of recursions.
 ⚪ Total work done:- This method is used for linear recursion. Here, (total work done = no of calls * work done per call) 
 ⚪ Recurrence Equation:- We use here for divide and conquer recursion. For example, f(n) = f(n/2) + f(n/2) ....... Function calls like a tree type structure.
 
-🛑 Space Complexity = maximum depth(height of the call stack) * memory inr each cell.
+🛑 Space Complexity = maximum depth(height of the call stack) * memory used in each cell.
 
