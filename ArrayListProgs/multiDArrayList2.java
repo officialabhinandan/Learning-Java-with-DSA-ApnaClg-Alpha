@@ -26,7 +26,7 @@ public class multiDArrayList2 {
 
         //printing using nested loop
         for(int i=0; i<mainList.size(); i++){
-          ArrayList<Integer> currList = mainList.get(i);
+          ArrayList<Integer> currList = mainList.get(i);  // taking the internal arraylists into the new arraylist to print
           for(int j=0; j<currList.size(); j++){
             System.out.print(currList.get(j) + " ");
           }
