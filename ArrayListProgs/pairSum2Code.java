@@ -21,7 +21,7 @@ public class pairSum2Code {
     /* we can also do this using the brute force method with O(n²) time complexity. But here we'll directly implement 2 pointer approach method.
      To do that, we need to find the breaking point first. In a sorted arraylist or array, (list.get(i) < list.get(i+1)) or (arr[i] < arr[i+1])
        */
-
+    // time complexity = O(n)
     public static boolean pairSum2(ArrayList<Integer> list, int target){
         int bp = -1; // bp = breaking point; (-1) because not a valid index
         int n = list.size();
