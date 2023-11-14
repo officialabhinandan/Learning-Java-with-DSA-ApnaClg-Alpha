@@ -1,13 +1,16 @@
-Classes are the group of entities and Objects are the entities in the real world. We can also say that, classes are the logical entities and objects
+🔴🟠🟡 Introduction to Classes and Objects 🟡🟠🔴
+
+⚪ Classes are the group of entities and Objects are the entities in the real world. We can also say that, classes are the logical entities and objects
 are the physical constructs which carry class's attributes and properties.
-Class is nothing but the blueprint of an object. Classes are consists of attributes/properties and behaviours/functions.
+⚪ Class is nothing but the blueprint of an object. Classes are consists of attributes/properties(Instance variables) and behaviours/functions.(Instance methods).
 
-Create objects in Java:-
-As you all know, in Java, a class provides the blueprint for objects, you create an object from a class. 
-Basically class act as a container where we collect attribute and behaviour of objects. By using instance or object of a class we can able to access member of class.
-Using new Keyword : Using new keyword is the most basic way to create an object. This is the most common way to create an object in java. Almost 99% of objects are created in this way. By using this method we can call any constructor we want to call (no argument or parameterized constructors).
+⚪ Create objects in Java:-
+⚪ As you all know, in Java, a class provides the blueprint for objects, you can create an object from a class. Basically class acts as a container
+ where we collect attribute and behaviour of objects. By using instance or object of a class we can able to access member of class.
+Using new Keyword : Using new keyword is the most basic way to create an object. This is the most common way to create an object in java. Almost
+ 99% of objects are created in this way. By using this method we can call any constructor we want to call (non argumented or parameterized constructors).
 
-
+🔴🟠🟡
 // Java program to illustrate creation of Object 
 // using new keyword 
 
@@ -22,10 +25,10 @@ public class A
         System.out.println(obj.name); 
     } 
 }
-Output
+Output:
 King
 
-We can able to create n number of object or instance for a class. For every instance of a class separate copy of instance member will create.
+🛑 We are able to create n number of objects or instances for a class. For every instance of a class separate copy of instance member will create.
 
 class A
 {
@@ -47,8 +50,8 @@ y.add(3,4);
 Output:
 22
 7
-In the above example , we can find out two objects for class A and for every object separate copy of add method created.
-We can able to invoke one member of a class n number of times as per our requirement by using same object reference.
+🛑 In the above example , we can find out two objects for class A and for every object separate copy of add method created.
+🛑 We can also invoke one member of a class n number of times as per our requirement by using same object reference variable.
 
 class A
 {
@@ -66,13 +69,14 @@ x.add(3,5);
 }
 }
 
-Output
+Output: 
 12
 8
-In the above example we invoke add method twice by using same reference of class A.
+In the above example we invoke add method twice by using same reference variable(x) of class A.
 
 
-An object is the real time entity of a class which has four characteristics 
+🔴🟠🟡 What is Object? 
+ An object is the real time entity of a class which has four characteristics:- 
 --> Attribute
 --> Behaviour 
 --> State 
@@ -84,34 +88,34 @@ iii) State is a set of properties which can take different values
     Whenever object executes in an operation we consider it to be in live state, otherwise the object is in the dead state.
 iv) Identity is a unique property by which we can distinguish between two objects.
 
-So, class is nothing but the container where we collect attributes and behaviours of similar types of the objects. We can declare variables inside a 
+🛑 So, class is nothing but the container where we collect attributes and behaviours of similar types of the objects. We can declare variables inside a 
 class. Those variables are called instance variables. These are nothing but the attributes of the objects.
 similarly we can define methods inside a class. Those methods are called instance methods. These are nothing but the behaviours of the objects.
-Then we make objects of class in the main method and access the attributes and behaviours of that particular class.
+Then we generally create objects of class in the main method and access the attributes and behaviours of that particular class. It isn't necessary
+to define an object inside the main method only. We can also make inside other methods.
+ 
 
-Access Modifiers/Specifiers:- 
-
-Common properties of OOP is given below-
+🔴🟠🟡 Common properties of OOP is given below:- 
 --> Abstraction
 --> Encapsulation.
 --> Inheritance.
 --> Polymorphism
 
-Abstraction:- Abstraction is basically hiding of data implementation.For example, to drive a car we do not need to know about the mechanism of the car.
-We just need to know thae attribute and behaviours of the car. Similarly to use any object we don't require to memory representation of the object.
-We just need to know the attribute and behaviours of the object. It's only about knowing essential things.
+⚪ Abstraction:- Abstraction is basically hiding of data implementation.For example, to drive a car we do not need to know about the mechanism of the car.
+We just need to know the attributes and behaviours of the car. Similarly to use any object we don't require to know its memory representation.
+We just need to know the attribute and behaviours of the object. It's only about knowing the essential things.
 
-Encapsulation:- Encapsulation represents wrapping of data and put into a single unit. Similarly Whenever we create an object of a class all the 
+⚪ Encapsulation:- Encapsulation represents wrapping of data and put into a single unit. Similarly whenever we create an object of a class all the 
 properties of that class are wrapped together within the object. That's why they are abstructed from user. Encapsulation is the reason and 
 abstruction is the result. 
 
-Inheritance:- It indicates the resuability of code. If we want to access the property of any other member we need a permission. That permission is taken 
-to Inherite. Here in OOPs if we want to redefine the properties of a class in another class, then sub class must require to take a permission from 
-the parent class. That is called Inheritance. Inheritance is a "is a" relationship. For example if Tiger, Lion and Cat inherits Animal class, we can say
+⚪ Inheritance:- It indicates the resuability of code. If we want to access the property of any other member we need a permission. That permission is taken 
+to Inherite. Here in OOPs if we want to redefine the properties of a class in another class, then sub/child class must require to take a permission from 
+the super/parent class. That is called Inheritance. Inheritance is an "is a" relationship. For example if Tiger, Lion and Cat inherits Animal class, we can say
 Tiger is an Animal, Lion is an Animal and so on.
 
 
-But there is concept called Aggregation in java. If we use the reference of a class within another class, that is aggregation. By using reference of
+🛑🛑🛑 But there is a concept called Aggregation in java. If we use the reference of a class within another class, that is aggregation. By using reference of
 a class, we can call the instance variables and methods of that class into another class but can't redefine that. But using inheritance we can redefine.
 Aggregation is a "has a" realtionship. For example, Car has a engine, Engine has a motor etc.
 In case of inheritance, sub class can inherit all the members of super class like instance methods, variables except private members. But constructors are not method of 
@@ -131,15 +135,15 @@ class Child{
     Child c = new Child(); // non-argumented
     // invokes Parent() then Child()
 }
-The object/reference of sub class can redefine/invoke both the members of super and sub classess. But the object/reference of super class can't 
+🛑🛑🛑 The object/reference of sub class can redefine/invoke both the members of super and sub classess. But the object/reference of super class can't 
 redefine/invoke the members of the sub class but invoke only the super class.
 
-“Super can refer to sub but vice versa is not possible”-by using reference variable of super class we can able to create object of sub class
-but by using reference of sub class we can’t able to create object of super. After that by using that reference if we invoke any method which
+🛑🛑🛑 “Super can refer to sub but vice versa is not possible”-by using reference variable of super class we can be able to create object of sub class
+but by using reference of sub class we can’t be able to create object of super. After that by using that reference if we invoke any method which
 is present in both then version of sub will invoke but in case of variable version of super will invoke. That means if we make the object of sub class
 using the reference of the super class, that can call all the overridden and non overridden method of the super class. But in case of overridden method
-the overrided version of the sub class will be invoked. But we can't call the non overridden method of the sub class. To call that we need to make
-the object of the sub class using the reference of the super class.
+the overrided version of the sub class will be invoked. But we can't call the non overridden methods of the sub class. To call that we need to make
+the object of the sub class using the reference of the sub class.
 For example, (See inheritPrac5.java)
 
 Super Keyword in Java
@@ -274,7 +278,7 @@ final keyword is used in different contexts. First of all, final is a non-access
 🔴Note: Mainmethod can be overridden in java. At the time of running, which main method(super class's or sub class's) will run, depends on the name of the
 class we are using to run. 
 
-Polymorphism:- After getting the permission when we redefine the proparties, that is nothing but Polymorphism. It means single interface multiple access.
+⚪ Polymorphism:- After getting the permission when we redefine the proparties, that is nothing but Polymorphism. It means single interface multiple access.
 There are two kinds of Polymorphism, we can implement in OOPs. Compiletime/Static Polymorphism and Runtime/Dynamic Polymorphism.
 
 i) Compile time/Static Polymorphism:- Here Inheritance is not required. It can be achieved within a single class. Within a single class if we define 

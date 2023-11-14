@@ -21,6 +21,7 @@ public class introToArrayList {
         System.out.println(myList1);
 
         myList1.add(4, 9); // adding an element to an particular index. T.C = O(n)/linear
+        System.out.println(myList1);
 
         // get operation - T.C = O(1)
         int num = myList1.get(0);

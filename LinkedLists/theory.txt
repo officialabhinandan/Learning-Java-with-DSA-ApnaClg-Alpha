@@ -1,0 +1,13 @@
+🔴🟠🟡 LinkedList:- In simple word, LinkedList is a linear data structure where we connect the data elements/nodes with the help of chains/links. Actually
+a linked list is a chain of data nodes or elements which are interconnected with a link or chain. If we visualize every single nodes of a LinkedList
+we notice that a node or data element has two parts. First part stores the data. It may be integer, float, boolean, long or string type. Second part 
+consists of next or reference or pointer which is actually points towards the next node. It links the next node. In case of last node, the next pointer
+referes to null. 
+
+🛑 In Java we use a reference variable in the place of next, which is a reference to the next node because their is no concept of pointer in Java 
+unlike c or c++. Basically reference variable is a type of variable(also read in OOPs) that points to an object. Here the object is the node(next node).
+
+🛑 So to create a LinkedList, we need to make NODE class where every nodes are the onject of the class NODE. Another reason to put all nodes inside the
+NODE class is that each node stores same type of informations (data and ref to the next node). So apperantly we know the blueprint of the node.  
+Using that we can make a central NODE class which carries all the proparties of each node present in the LinkedList. Each individual node is the 
+object of that NODE class. Now we'll apply the concept of OOPs to build this data structure. 
