@@ -146,10 +146,12 @@ the overrided version of the sub class will be invoked. But we can't call the no
 the object of the sub class using the reference of the sub class.
 For example, (See inheritPrac5.java)
 
-Super Keyword in Java
-The super keyword in java is a reference variable that is used to refer parent class objects.  The keyword “super” came into the picture with the concept of Inheritance. It is majorly used in the following contexts:
+🔴🟠🟡 Super Keyword in Java
+The super keyword in java is a reference variable that is used to refer parent class objects. The keyword “super” came into the picture with the concept 
+of Inheritance. It is majorly used in the following contexts:
 
-1. Use of super with variables: This scenario occurs when a derived class and base class has same data members. In that case there is a possibility of ambiguity for the JVM. We can understand it more clearly using this code 
+1. Use of super with variables: This scenario occurs when a derived class and base class has same data members. In that case there is a 
+possibility of ambiguity for the JVM. We can understand it more clearly using this code......
 
 /* Base class vehicle */
 class Vehicle 
@@ -179,13 +181,12 @@ class Test
     } 
 } 
 Output:
-
-
-
 Maximum Speed: 120
+
 In the above example, both base class and subclass have a member maxSpeed. We could access maxSpeed of base class in subclass using super keyword.
  
-2. Use of super with methods: This is used when we want to call parent class method. So whenever a parent and child class have same named methods then to resolve ambiguity we use super keyword. This code snippet helps to understand the said usage of super keyword.
+2. Use of super with methods: This is used when we want to call parent class method. So whenever a parent and child class have same named methods
+then to resolve ambiguity we use super keyword. This code snippet helps to understand the said usage of super keyword......
 
 /* Base class Person */
 class Person 
@@ -229,9 +230,13 @@ class Test
 Output:
 This is student class
 This is person class
-In the above example, we have seen that if we only call method message() then, the current class message() is invoked but with the use of super keyword, message() of superclass could also be invoked.
+
+In the above example, we have seen that if we only call method message() then, the current class message() is invoked but with the use of super
+keyword, message() of superclass could also be invoked.
  
-3. Use of super with constructors: super keyword can also be used to access the parent class constructor. One more important thing is that, ‘’super’ can call both parametric as well as non parametric constructors depending upon the situation. Following is the code snippet to explain the above concept:
+3. Use of super with constructors: super keyword can also be used to access the parent class constructor. One more important thing is that,
+‘super’ can call both parametric as well as non parametric constructors depending on the situation. Following is the code snippet to explain 
+the above concept:
 
 /* superclass Person */
 class Person 
@@ -268,29 +273,31 @@ Person class Constructor
 Student class Constructor
 In the above example we have called the superclass constructor using keyword ‘super’ via subclass constructor.
 
-final keyword in java
-final keyword is used in different contexts. First of all, final is a non-access modifier applicable only to a variable, a method or a class.Following are different contexts where final is used.
+🔴🟠🟡 Final keyword in java
+final keyword is used in different contexts. First of all, final is a non-access modifier applicable only to a variable, a method or a class. Following are different contexts where final is used.
 
 🔴final variable::::::::::::::::::: to create constant variable
 🔴final method:::::::::::::::::::  to prevent method overriding
 🔴final class::::::::::::::::::::::::   to prevent inheritance
 
-🔴Note: Mainmethod can be overridden in java. At the time of running, which main method(super class's or sub class's) will run, depends on the name of the
+🔴Note: Main method can be overridden in java. At the time of running, which main method(super class's or sub class's) will run, depends on the name of the
 class we are using to run. 
 
 ⚪ Polymorphism:- After getting the permission when we redefine the proparties, that is nothing but Polymorphism. It means single interface multiple access.
-There are two kinds of Polymorphism, we can implement in OOPs. Compiletime/Static Polymorphism and Runtime/Dynamic Polymorphism.
+There are two kinds of Polymorphism, we can implement in OOPs. Compile 
+time/Static Polymorphism and Runtime/Dynamic Polymorphism.
 
-i) Compile time/Static Polymorphism:- Here Inheritance is not required. It can be achieved within a single class. Within a single class if we define 
-one thing more than one time, that is the example of complie time Polymorphism. For example, method overloading and contructor overloading.
+i) Compile time/Static Polymorphism:- Here Inheritance is not required. It can be achieved within a single class. Within a single class if we 
+define one class member(instance method or constructor) more than one time but with defferent signature, that is an example of complie time Polymorphism. 
+For example, method overloading and contructor overloading.
 
-ii) Runtime/Dynamic Polymorphism:- Here we require more than one class. If we define the proparties of one class within another class, that is runtime Polymorphism. For that
-inheritance is mandatory. example, method overriding.
+ii) Runtime/Dynamic Polymorphism:- Here we require more than one class. If we define the proparties of one class within another class, that is runtime Polymorphism.
+For that inheritance is mandatory. example, method overriding.
 
-P.S. Without implementing runtime Polymorphism, the use of inheritance is nothing but misuse of inheritance. For example a sub or child class Inherites
+🛑 P.S. Without implementing runtime Polymorphism, the use of inheritance is nothing but misuse of inheritance. For example a sub or child class inherites
 its super or parent class but doesn't redefine the proparties of the super class. Then what is the essesce of inheritance? 
 
-Abstraction and Encapsulation are seemed to be very similar but they have a basic difference. Abstraction is not only about data hiding (hiding
+🛑🛑🛑 Abstraction and Encapsulation are seemed to be very similar but they have a basic difference. Abstraction is not only about data hiding (hiding
 the unnecessary data), but also about showing the important data to the user. On the other hand, Encapsulation wraps up the data and related functions 
 and implements data hiding with the help of access specifiers. Abstract class is basically hiding the data implementation but showing the functionality
 to the user.
@@ -298,11 +305,11 @@ We can implement the concept of Abstraction in OOPs in two types.
 1) Abstract class.
 2) Interface.
 To make an abstract class we need to write abstract keyword before a class name. In case of an abstract class, 
-i> We can't create an instance(object) of an abstract class.That means it can't be instantaniated. We can only inherit the class. 
+i> We can't create an instance(object) of an abstract class. That means it can't be instantaniated. We can only inherit the class. 
 ii> It can contain abstract as well as non abstract, static and final methods. To write a abstract method:- abstract returnType funtionName(){ //code }.
 iii> It can have constructors. 
 
-🔴Note:- Abstract method is a type of method which can be declared but can’t be defined inside an abstract class but cannot write 
+🔴Note:- Abstract method is a type of method which can be declared but can’t be defined inside an abstract class. We cannot write 
 its implementation inside that class. By using abstract classes we collect the common proparties of same type of classes. If a class inherit an 
 abstract class, it is the responsibility of that class to override/redefine each and every abstract method present in that particular abstract 
 super class. We may not create an abstract method inside an abstract class but that won't make any sense. That will be the misuse of abstract class.
@@ -314,20 +321,20 @@ i) We can create the object of the sub-class which is inherited the abstract cla
 method of the abstract class.
 ii) On the other hand we can make that method static and call it by simply using className.methodName() 
 
-🔴 Even main method can also be inside an abstract class as a non-abstract method.
+🔴🟢🔵 Even main method can also be inside an abstract class as a non-abstract method.
 
 🟡🟠🔴
-Inheritance is the blueprint of a class. In has mainly two jobs to perform in Java.  
+Interface is the blueprint of a class. In has mainly two jobs to perform in Java.  
 1) To implement multiple inheritance in Java. It is the 5th type of inheritance which can be implemeted by default in c++ using class. But in Java we
 need to take the help of interface.
 2) To achieve 100% or total abstraction. In case of abstract class if we keep any non-abstract method inside an abstract class we can't achieve total
-abstraction. To do that we need to declare all the methods abstract inside a abstract class. But in case of inteface we always get total abstraction.
+abstraction. To do that we need to declare all the methods abstract inside an abstract class. But in case of inteface we always get total abstraction.
 
-🔴 Basic str of an Interface:- To declare an interface we use interface keyword before its name. When a class inherits another, we write 
-implements. if an interface inherits another intergace we use extends. Class can inherit interface but the opposite is not true. 
+🔴 Basic str of an Interface:- To declare an interface we use interface keyword before its name. When a class inherits an interface, we write 
+implements. if an interface inherits another interface we use extends. Class can inherit interface but the opposite is not true. 
 
 🔴 Basic characteristics of an Interface:-
-i) All methods of an interface are public, abstract and without implementation(Only initialization but not definition).
+i) All methods of an interface are public, abstract and without any implementation(Only initialization but not definition).
 ii) They are used to achieve total abstraction.
 iii) Variables in the interface are final, public and static by defalut.
 iV) A class can inherit more than one interface.
@@ -335,9 +342,9 @@ v) It can't be instantaniated.(Can't make object of an interface).
 vi) It is also a "IS-A" relationship like class.
 
 The class inherits an interface must inherit all the methods publicly present inside the interface as all the methods are public and abstract 
-by default.
-Since Java 8, we can have default and static methods in an interface.
-Since Java 9, we can have private methods in an interface.
+by default. But,
+🛑🛑🛑 Since Java 8, we can have default and static methods in an interface.
+🛑🛑🛑 Since Java 9, we can have private methods in an interface.
 
 🟡🟠🔴 Difference between Abstract class and Interface:-
 
@@ -361,9 +368,10 @@ JDK = JRE + Compiler(Dev tools)          // JDK = Java Development kit; JRE = Ja
 JRE = JVM + Core Java API Libraries      // JVM = Java Virtual Machine; API = Application Program interface
 Remember, JVM is used to run the java program, but we need compiler separately to complie a java program which comes with JDK.
 
-Java is not a fully Object Oriented Programming language. Because of the usage of static keyword and the presense wrapper class.
-By using static keyword, we can bypass the method of the making of object to access any member.
-All the primary datatypes present in java (int, char, float, long....) have a predefined class each called wrapper class.
+🛑🛑🛑🛑
+Java is not a fully Object Oriented Programming language. Because of the usage of static keyword and the presence wrapper class.
+⚪ By using static keyword, we can bypass the method of the making of object to access any member.
+⚪ All the primary or premitive datatypes present in java (int, char, float, long....) have a predefined class each called wrapper class.
 That's why java is not a fully object oriented programming language.
 
 In java basically we work with 4 types of variable:-
@@ -371,16 +379,17 @@ In java basically we work with 4 types of variable:-
 --> Local variable
 --> Reference variable
 --> Static variable
-Instance variable are those which are attribute of an object. We can declare inside a class.
-Local variable are declared inside a method, constructor or block.
-Reference refers to an object. We use it at the time of creating the object.
-Static variable or class variable can be accessed without creating the object.
+⚪ Instance variable are those which are attribute of an object. We can declare inside a class.
+⚪ Local variable are declared inside a method, constructor or block.
+⚪ Reference variable refers to an object. We use it at the time of creating the object.
+⚪ Static variable can be accessed without creating the object.
 
-METHOD OVERLOADING:-
+🔴🟠🟡 METHOD OVERLOADING:-
 If a class has multiple methods having same name but different signatures, it is known as Method Overloading. Signature of a method indicates no of parameter as well as type of parameter.
-In the concept of method overloading at compile time by knowing parameter control recognize which method will invoke, that’s why method overloading is the example of compile time polymorphism.
+In the concept of method overloading during compile time by knowing the parameter, the control recognizes which method to be invoked, that’s why method overloading is the example of compile time polymorphism.
 If we have to perform only one operation, having same name of the methods increases the readability of the program.
-Overloading allows different methods to have the same name, but different signatures where the signature can differ by the number of input parameters or type of input parameters or both. Overloading is related to compile-time (or static) polymorphism.
+Overloading allows different methods to have the same name, but different signatures where the signature can differ by the number of input parameters or type of input parameters or both. 
+Overloading is related to compile-time (or static) polymorphism.
 public class Sum { 
       // Overloaded sum(). This sum takes two int parameters 
     public int sum(int x, int y) 
@@ -411,8 +420,10 @@ Output
 60
 30.70
 
-Constructor:-
-Constructor is a block of code that initializes the newly created object. A constructor resembles an instance method in java but it’s not a method as it doesn’t have a return type. In short constructor and method are different(More on this at the end of this guide). People often refer constructor as special type of method in Java.
+🔴🟠🟡 Constructor:-
+Constructor is a block of code that initializes the newly created object. A constructor resembles an instance method in java but it’s not a method
+as it doesn’t have a return type. In short constructor and method are different(More on this at the end of this guide). People often refer 
+constructor as special type of method in Java.
 Constructor has same name as the class and looks like this in a java code.
 public class MyClass{
    //This is the constructor
@@ -420,13 +431,16 @@ public class MyClass{
    }
    ..
 }
-Need of Constructor
-Think of a Box. If we talk about a box class then it will have some class variables (say length, breadth, and height). But when it comes to creating its object(i.e Box will now exist in computer’s memory), then can a box be there with no value defined for its dimensions. The answer is no.
-So constructors are used to assign values to the class variables at the time of object creation, either explicitly done by the programmer or by Java itself (default constructor).
+⚪ Need of a Constructor: 
+Think of a Box. If we talk about a box class then it will have some class variables (say length, breadth, and height). But when it comes to creating its object
+(i.e Box will now exist in computer’s memory), then can a box be there with no value defined for its dimensions. The answer is no.
+So constructors are used to assign values to the class variables at the time of object creation, either explicitly done by the programmer or 
+by Java itself (default constructor).
 
 When is a Constructor called ?
-Each time an object is created using new() keyword at least one constructor (it could be default constructor) is invoked to assign initial values to the data members of the same class.
-A constructor is invoked at the time of object or instance creation. For Example:
+Each time an object is created using new() keyword at least one constructor (it could be default constructor) is invoked to assign initial 
+values to the data members of the same class. A constructor is invoked at the time of object or instance creation.
+For Example:
 
 class A
 {   
@@ -446,14 +460,16 @@ A obj = new A();
 Rules for writing Constructor:
 Constructor(s) of a class must has same name as the class name in which it resides.
 A constructor in Java can not be abstract, final, static and Synchronized.
-Access modifiers can be used in constructor declaration to control its access i.e which other class can call the constructor.
+Access modifiers can be used in constructor declaration to control its access i.e so that other classes can call the constructor.
 
 Types of constructor
 There are three type of constructor in Java:
 
-No-argument constructor: A constructor that has no parameter is known as default constructor. If we don’t define a constructor in a class, then compiler creates default constructor(with no arguments) for the class. And if we write a constructor with arguments or no-arguments then the compiler does not create a default constructor.
+🛑 No-argument constructor: A constructor that has no parameter is known as default constructor. If we don’t define a constructor in a class, 
+then compiler creates default constructor(with no arguments) for the class. And if we write a constructor with arguments or no-arguments then 
+the compiler does not create a default constructor.
 Default constructor provides the default values to the object like 0, null, etc. depending on the type.
-// no-argument constructor 
+// non-argument constructor 
   class A 
 { 
     int num; 
@@ -484,7 +500,8 @@ Constructor called
 null
 0
 
-Parameterized Constructor: A constructor that has parameters is known as parameterized constructor. If we want to initialize fields of the class with your own values, then use a parameterized constructor.
+🛑 Parameterized Constructor: A constructor that has parameters is known as parameterized constructor. If we want to initialize fields of the
+class with our own values, then we use a parameterized constructor.
 // parameterized constructor. 
 import java.io.*; 
   
@@ -496,7 +513,7 @@ class  A
   
     // constructor would initialize data members 
     // with the values of passed arguments while 
-    // object of that class created. 
+    // object of that class will be created. 
     A(String name, int id) 
     { 
         this.name = name; 
@@ -518,12 +535,13 @@ Output:
 
 Name :adam and Id :1
 
-Does constructor return any value?
+🛑 Does constructor return any value?
 There are no “return value” statements in constructor, but constructor returns current class instance. We can write ‘return’ inside a constructor.
 
-Constructor Overloading
+🛑🛑🛑 Constructor Overloading
 
-Like methods, we can overload constructors for creating objects in different ways. Compiler differentiates constructors on the basis of numbers of parameters, types of the parameters and order of the parameters.
+Like methods, we can overload constructors for creating objects in different ways. Compiler differentiates constructors on the basis of numbers 
+of parameters, types of the parameters and order of the parameters.
 // Java Program to illustrate constructor overloading 
 // using same task (addition operation ) for different 
 // types of arguments. 
@@ -578,36 +596,38 @@ Constructor with one argument - String : raj
 Constructor with two arguments - String and Integer : rahul  10
 Constructor with one argument - Long : 325614567
 
-How constructors are different from methods in Java?
+🛑🛑🛑 How constructors are different from methods in Java?
 Constructor(s) must have the same name as the class within which it defined while it is not necessary for the method in java.
-Constructor(s) do not return any type while method(s) have the return type or void if does not return any value.
+Constructor(s) does not return any type while method(s) have the return type or void if does not return any value.
 Constructor is called only once at the time of Object creation while method(s) can be called any numbers of time.
 
-Copy Constructor:- We use copy constructor to copy the value of the instance member of one object within the instance member of another object of the same class.
+🛑 Copy Constructor:- We use copy constructor to copy the value of the instance member of one object within the instance member of another object of the same class.
 Copy constructpr are of two types, shallow copy constructor and deep copy constructor. Ref. search lazy copy in Google and read from stack overflow. 
 
-In Java there are 57 keywords available. We use static foir memory management. We know that whenever we create instance or object of a class, for each object or instance
+🔴🟠🟡 Static:-
+In Java there are 57 keywords available. We use static for memory management. We know that whenever we create instance or object of a class, for each object or instance
 separate copy of instance member is created. But if the member is static member, only one copy is created which can be shared by all the objects.
-The most important part is, to use static member of a class within the same class static member we don't require any object or class name. We can 
-use directly. But in case of different class we need to write className.memberName. Still we can use by creating object. That won't be wrong but that would be 
+The most important part is, to use static member of a class within the same class we don't require any object or class name. We can use directly.
+But in case of different class we need to write className.memberName. Still we can use by creating object. That won't be wrong but that would be 
 unnecessary. In Java we can't assign any global variable, but using static we can ensure that.
 In Java inside a class we can be able to assign four types of static member. They are--
 --> Static Block
---> Static Variable(also known as class variable)
+--> Static Variable (also known as class variable)
 --> Static Method
 --> Static Class
 
-Static Block:- Generally it is used to initialize static variables. We can also perform other tasks too. e.g 
+⚪ Static Block:- Generally it is used to initialize static variables. We can also perform other tasks too. e.g 
  static {
   //code
  } 
-Usually every program starts running from the main method. But if we use static block, it invokes before the JVM loads the main. That means static runs
+
+🛑 Usually every program starts running from the main method. But if we use static block, it invokes before the JVM loads the main. That means static runs
 before the main method. We can declare n numbers of static block and they are invoked asper their appearance. We don't require to call them, they are 
-automatically called before main method called.
+automatically called before main method is called.
 
 If we wish we can declare a class inside another class and the inner class can be declared as static. This is called static nested class.
 
-Sir's Notes on Static:-
+🌹🌹🌹 Debabjan Sir's Notes on Static:-
 In Java, keywords are the reserved words that cannot be used as identifiers. In total there are 57 keywords in Java. One among them is “Static“. In this article, I will give you a brief insight into how static keyword in Java is applicable for various aspects of programming.
 Introduction to Static Keyword in Java
 In Java, static keyword is mainly used for memory management. It can be used with variables, methods, blocks and nested classes. It is a keyword which is used to share the same variable or method of a given class. Basically, static is used for a constant variable or a method that is same for every instance of a class. The main method of a class is generally labeled static.
@@ -618,7 +638,7 @@ Static Variable
 Static Method
 Static Classes
 
-Static Block
+⚪ Static Block:-
 If you need to do the computation in order to initialize your static variables, you can declare a static block that gets executed exactly once, when the class is first loaded. Take a look at the below Java program to understand the usage of Static Block.
 
 // Java program to demonstrate the use of static blocks
@@ -646,8 +666,9 @@ Inside main method
 Value of j:10
 Value of n : 80
 
-Static Variable
-When you declare a variable as static, then a single copy of the variable is created and divided among all objects at the class level. Static variables are, essentially, global variables. Basically, all the instances of the class share the same static variable. Static variables can be created at class-level only.
+⚪ Static Variable:- 
+When you declare a variable as static, then a single copy of the variable is created and divided among all objects at the class level. Static variables are, essentially, global variables. 
+Basically, all the instances of the class share the same static variable. Static variables can be created at class-level only.
 import java.util.*;
  public class A
 {
@@ -677,14 +698,18 @@ Inside the static block
 Value of j: 20
 Inside main method
 
-Static Methods
-When a method is declared with the static keyword, it is known as a static method. The most common example of a static method is the main( ) method.  Methods declared as static can have the following restrictions:
-They can directly call other static methods only.
-They can access static data directly.
-Static Class
-A class can be made static only if it is a nested class. Nested static class doesn’t need a reference of Outer class. In this case, a static class cannot access non-static members of the Outer class. Let’s take an example to understand how it works
+⚪ Static Methods:-
+When a method is declared with the static keyword, it is known as a static method. The most common example of a static method is the main() method. Methods declared as static can have the following restrictions:
+i)  They can directly call other static methods only.
+ii) They can access static data directly.
+
+
+⚪ Static Class:- 
+A class can be made static only if it is a nested class. Nested static class doesn’t need a reference of Outer class. In this case, a static class cannot access non-static members of the Outer class. 
+Let’s take an example to understand how it works.....
+
 public class NestedExample{
-private static String str= "king"
+private static String str= "king"  // private but static member
 //Static class
 static class MyNestedClass{
 //non-static method
@@ -700,11 +725,13 @@ obj.disp();
 Output:
 king
 
+🔴🟠🟡
 Nested Classes in Java(Debanjan Sir's Notes):-
-In java, it is possible to define a class within another class, such classes are known as nested classes. They enable you to logically group classes that are only used in one place, thus this increases the use of encapsulation, and create more readable and maintainable code.
-The scope of a nested class is bounded by the scope of its enclosing class. Thus in below example, class NestedClass does not exist independently of class OuterClass.
-A nested class has access to the members, including private members, of the class in which it is nested. However, reverse is not true i.e. the enclosing class does not have access to the members of the nested class.
-A nested class is also a member of its enclosing class.
+In java, it is possible to define a class within another class, such classes are known as nested classes. They enable you to logically group 
+classes that are only used in one place, thus this increases the use of encapsulation, and create more readable and maintainable code.
+The scope of a nested class is bounded by the scope of its enclosing class. Thus in below example, class NestedClass does not exist independently
+of class OuterClass. A nested class has access to the members, including private members, of the class in which it is nested. However, reverse is
+not true i.e. the enclosing class does not have access to the members of the nested class. A nested class is also a member of its enclosing class.
 As a member of its enclosing class, a nested class can be declared private, public, protected, or package private(default).
 Nested classes are divided into two categories:
 
@@ -723,15 +750,16 @@ class OuterClass
     }
 }
 
-Static nested classes
-As with class methods and variables, a static nested class is associated with its outer class. And like static class methods, a static nested class cannot refer directly to instance variables or methods defined in its enclosing class: it can use them only through an object reference.
+🛑 Static nested class:-
+As with class methods and variables, a static nested class is associated with its outer class. And like static class methods, a static nested 
+class cannot refer directly to instance variables or methods defined in its enclosing class: it can use them only through an object reference.
 
 They are accessed using the enclosing class name.
 OuterClass.StaticNestedClass
 For example, to create an object for the static nested class, use this syntax:
-OuterClass.StaticNestedClass   nestedObject =
-     new   OuterClass.StaticNestedClass();
-Example
+OuterClass.StaticNestedClass  nestedObject =  new  OuterClass.StaticNestedClass();
+
+Example:
 // outer class 
 class OuterClass 
 {  
@@ -739,7 +767,7 @@ class OuterClass
     static int outer_x = 10; 
         // instance(non-static) member 
     int outer_y = 20; 
-      // private member 
+      // private static member 
     private static int outer_private = 30; 
        // static nested class 
     static class StaticNestedClass 
@@ -751,8 +779,8 @@ class OuterClass
                     // can access display private static member of outer class 
             System.out.println("outer_private = " + outer_private); 
                // The following statement will give compilation error 
-            // as static nested class cannot directly access non-static membera 
-            // System.out.println("outer_y = " + outer_y); 
+            // as static nested class cannot directly access non-static members
+            // System.out.println("outer_y = " + outer_y); .....prints error......
           
         } 
     } 
@@ -763,7 +791,7 @@ public class StaticNestedClassDemo
     public static void main(String[] args) 
     { 
         // accessing a static nested class 
-        OuterClass.StaticNestedClass    nestedObject = new    OuterClass.StaticNestedClass(); 
+        OuterClass.StaticNestedClass nestedObject = new OuterClass.StaticNestedClass(); 
             nestedObject.display(); 
           } 
 } 
@@ -771,10 +799,11 @@ Output:
 outer_x = 10
 outer_private = 30
 
-Non static Inner classes
-To instantiate an inner class, you must first instantiate the outer class. Then, create the inner object within the outer object with this syntax:
-OuterClass     outerObject=new    OuterClass();
-OuterClass.InnerClass    innerObject = outerObject.new   InnerClass();
+🛑 Non static Inner class:-
+To instantiate an non-static inner class, you must first instantiate the outer class. Then, create the inner object within the outer object with
+this syntax:
+OuterClass outerObject = new OuterClass();
+OuterClass.InnerClass  innerObject = outerObject.new   InnerClass();
 Example
 // outer class 
 class OuterClass 
@@ -784,7 +813,7 @@ class OuterClass
   // instance(non-static) member 
     int outer_y = 20; 
       
-    // private member 
+    // private non-static member 
     private int outer_private = 30; 
       
     // inner class 
@@ -810,8 +839,8 @@ public class InnerClassDemo
     public static void main(String[] args) 
     { 
         // accessing an inner class 
-        OuterClass   outerObject = new   OuterClass(); 
-        OuterClass.InnerClass   innerObject = outerObject.new   InnerClass(); 
+        OuterClass  outerObject = new  OuterClass(); 
+        OuterClass.InnerClass  innerObject = outerObject.new  InnerClass(); 
           
         innerObject.display(); 
           
@@ -822,9 +851,14 @@ outer_x = 10
 outer_y = 20
 outer_private = 30
 
-Difference between static and inner(non-static nested) classes
-Static nested classes do not directly have access to other members(non-static variables and methods) of the enclosing class because as it is static, it must access the non-static members of its enclosing class through an object. That is, it cannot refer to non-static members of its enclosing class directly. Because of this restriction, static nested classes are seldom used.
-Non-static nested classes (inner classes) has access to all members(static and non-static variables and methods, including private) of its outer class and may refer to them directly in the same way that other non-static members of the outer class do.
+🛑 Difference between static and inner(non-static nested) classes:-
+
+⚪ Static nested classes do not directly have access to other members(non-static variables and methods) of the enclosing class because as 
+it is static, it must access the non-static members of its enclosing class through an object. It cannot refer to non-static members of 
+its enclosing class directly. Because of this restriction, static nested classes are seldom used.
+
+⚪ On the other hand, non-static nested classes (inner classes) has access to all members(static and non-static variables and methods, 
+including private) of its outer class and may refer to them directly in the same way that other non-static members of the outer class do.
 
 Reference : GeeksforGeeks
 
