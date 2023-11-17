@@ -4,7 +4,7 @@ class ByDebanjanSir11 {  //This is an outer class
 
     //static member of the outer class
     static int a = 10;  
-    //satic member of the inner class
+    //non-static member of the outer class
     int b = 20;
     //private static  variable of the outer class
     private static int pvt = 50;
