@@ -11,3 +11,23 @@ unlike c or c++. Basically reference variable is a type of variable(also read in
 NODE class is that each node stores same type of informations (data and ref to the next node). So apperantly we know the blueprint of the node.  
 Using that we can make a central NODE class which carries all the proparties of each node present in the LinkedList. Each individual node is the 
 object of that NODE class. Now we'll apply the concept of OOPs to build this data structure. 
+
+class Node{
+    int data;
+    Node next; // data type is itself the class type (bcz the next variable is pointing towards the object of the next node)
+    
+    // defining constructor
+    public Node(int data){
+        this.data = data; // this.data is present inside the class Node
+        this.next = null; // at starting point we assume that it isn't pointing towards any other node
+    }
+}
+🛑 So, to create a single node we need to create an object of the Node inside the LinkedList class.
+🛑 We keep track two of the most important or special nodes in a linkedlist. 
+    ⚪ Head Node (1st node) and, 
+    ⚪ Tail Node (last node before null).
+🛑 If we have data of the head and tail node, we can traverse throughout the linkedlist using the data of the next.
+🛑 We can access one node at a time in a linkedlist.
+   in a linkedlist.
+🛑 At the last node, the next points towards the null. In case we have a linkedlist consists of a single node, the head and the tail points
+to the same node. In that case head equals to tail.
