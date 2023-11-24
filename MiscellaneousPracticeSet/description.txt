@@ -1,0 +1,7 @@
+This miscellaneous practice set is a combination of the solution of various coding questions randomly selected from internet such as,
+⚪ Imp questions from Hackerrank, CodeChef, Codeforces and LeetCode etc.
+⚪ Imp questions of the coding round of the various companies.
+⚪ Imp questions found in random YouTube tutorials.
+⚪ Imp questions from random online forums.
+
+These are the mixture of all the topics of data structure and algorithms. 
