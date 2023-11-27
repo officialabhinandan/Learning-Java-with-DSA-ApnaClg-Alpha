@@ -31,3 +31,33 @@ class Node{
    in a linkedlist.
 🛑 At the last node, the next points towards the null. In case we have a linkedlist consists of a single node, the head and the tail points
 to the same node. In that case head equals to tail.
+
+🛑🛑🛑 To add node at first of a linkedlist :- // T.C = O(1)
+    ⚪ First, we create a node and check if there is any further node available to connect to not using the next variable.
+    ⚪ If no next node is found, we make the same node head and tail both.
+    ⚪ But if another node is available to link, at first we link both the nodes using next refence variable.
+    ⚪ Whenever we type newNode.next = head; we store the address of the head variable (not the value) inside the next refence variable of the newNode.
+    ⚪ Atlast we declare the newly added node as head.
+
+🛑🛑🛑 To add node at last of a linkedlist :-  // T.C = O(1)
+    ⚪ Create a new node (newNode),
+    ⚪ Check wheather the linkedlist is empty or not. In that case declare the node as tail as well as head node. The next varibale is by default 
+        pointed towards null. 
+    ⚪ Tail's next = new Node
+    ⚪ tail = new Node.
+
+🛑🛑🛑 To print a LinkedList :-  // T.C = O(n)
+    ⚪ Check the ll is empty or not(head == null). In that case print null.
+    ⚪ Create a temporary node and store the value of head inside it(Node temp = head)
+    ⚪ Now run a while loop untill temp != null and print temp.data(Sysout(temp.data + " ")) and move towards the next Node(temp = temp.next).
+
+🛑🛑🛑 To add node at middle of a linkedlist :- // T.C = O(n)
+    ⚪ If we try to insert at index 0, call addFirst(data) and return.
+    ⚪ Create a new Node to insert (Node newNode = new Node(data)) and make another new Node temp and assign it as head(Node temp = head).
+    ⚪ Create i(int i=0) variable to track the index while traversing throughout the ll.
+    ⚪ Run while loop and traverse the temp node (temp = temp.next) throughout the ll untill i<index-1.
+    ⚪ while i reaches to previous node connect newNode's next with the next node (newNode.next = temp.next).
+    ⚪ And connect temp with the new Node (temp.next = newNode).
+
+
+
