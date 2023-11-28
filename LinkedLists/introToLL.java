@@ -91,7 +91,7 @@ public class introToLL {
             temp = temp.next;
             i++;
         }
-        // i = imdex -1; temp = previous
+        // i = index -1; temp = previous
         newNode.next = temp.next;
         temp.next = newNode;
     }

@@ -26,7 +26,7 @@ public class introToArrayList {
         // get operation - T.C = O(1)
         int num = myList1.get(0);
         System.out.println("Element at index 0 is " + num);
-        System.out.println("Element at index 1 is " + myList1.get(2));
+        System.out.println("Element at index 2 is " + myList1.get(2));
 
         // delete/remove operation - T.C = O(n)
         myList1.remove(1);
