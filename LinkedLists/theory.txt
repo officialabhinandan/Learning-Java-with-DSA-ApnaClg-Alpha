@@ -55,9 +55,51 @@ to the same node. In that case head equals to tail.
     ⚪ If we try to insert at index 0, call addFirst(data) and return.
     ⚪ Create a new Node to insert (Node newNode = new Node(data)) and make another new Node temp and assign it as head(Node temp = head).
     ⚪ Create i(int i=0) variable to track the index while traversing throughout the ll.
-    ⚪ Run while loop and traverse the temp node (temp = temp.next) throughout the ll untill i<index-1.
-    ⚪ while i reaches to previous node connect newNode's next with the next node (newNode.next = temp.next).
+    ⚪ Run while loop and traverse the temp node (temp = temp.next) throughout the ll untill it reaches the previous node (i<index-1).
+    ⚪ while i reaches the previous node connect newNode's next with the next node (newNode.next = temp.next).
     ⚪ And connect temp with the new Node (temp.next = newNode).
 
+🛑🛑🛑 To remove a node from the first of a ll :-
+    ⚪ If the ll is empty from the beginning (if(size == null)), print empty.
+    ⚪ If the ll has only one node, make it head and tail and then declare it as null (if(size == 1) { head = tail = null })
+    ⚪ For normal cases declare head = head.next. The link will be automatically broke and the next node wil be the new head. 
+    ⚪ Garbage collector will automatically delete the previous head node. 
 
+🛑🛑🛑 To remove a node form the last of a ll :-
+    ⚪ Check if the size of the ll is 0 (if(size==0)), print "empty ll". Return positive/negative infinite value. (Optional)
+    ⚪ In case, the ll has only one node(if(size==1)), store that node's data into val(int val = tail.data). 
+       Make that node tail as well as head. Make size = 0. Return val.
+    ⚪ For general cases, make a node prev and store head inside it. (Node prev = head).
+    ⚪ Traverse through the ll untill it reaches size-2 (prev node of the last node).
+    ⚪ As soon as it reaches size-2 node, store tail's data inside val (int val = prev.next.data/tail.next) and store connect prev node with null. 
+       (prev.next = null).
+    ⚪ Make the prev node, the new tail(tail = prev) and reduce size of the ll (size--).
+    ⚪ Return the val.
+
+🛑🛑🛑 Iterative search of an element inside an ll :-  public int iterativeSearch(int key){}
+   ⚪ To search an element is present inside an ll or not, we take a temporary node and assign head inside it. (Node temp = head).
+   ⚪ We also take an index i.
+   ⚪ Run while loop with condition [while(temp!=null)], we traverse by doing temp = temp.next and increase i (i++).
+   ⚪ As soon as it founds the element (if(temp.data == key)) return the index (i). 
+   ⚪ Else, return invalid index(-1).
+
+🛑🛑🛑 Recursive search of an element inside an ll :- public int recursiveSearch(int key){ return helperFunc(head, key)} and public int helperFunc(Node head, int key){ ...code...}
+   ⚪ Here take help of a helper function as we can only pass key integer value inside the recursiveSearch function. 
+   ⚪ Inside the helper function we pass a node(Node head) and an integer (int key) to search inside the ll.
+   ⚪ In the recursive function, the base case is if the ll is empty (if(size == 0)) return -1. 
+   ⚪ If head's data is itself the key (if(head.data == key)), return 0.
+   ⚪ As recursive steps, the fuction will recursively call itself with head's next [int idx = helperFunc(head.next, key);].
+   ⚪ If it doesn't find the key, it eventually returns -1 otherwise it returns its index as 0 (unlike iteration).
+   ⚪ Outside the loop we adjust its index by returning idx+1.
+
+🛑🛑🛑 To reverse a ll :-
+   ⚪ Here we'll take three variables of Node types. Prev, curr and next.
+   ⚪ Here we can set Curr as head and tail as we are performing revrse operations of a ll.
+   ⚪ We'll traverse the ll using curr variable (while(curr!=null)).
+   ⚪ Then link curr node with the next node (next = curr.next).
+   ⚪ Then link the curr node with the prev node (curr.next = prev).
+   ⚪ Make prev node the new curr node (prev = curr) and curr node is the new next node (curr = next).
+
+🛑🛑🛑 To delete Nth node from the last of a ll :-
+   ⚪ 
 

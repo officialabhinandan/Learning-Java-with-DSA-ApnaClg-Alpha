@@ -96,6 +96,132 @@ public class introToLL {
         temp.next = newNode;
     }
 
+    public int removeFirst(){   // making it int type to return the val of the deleted node
+       // corner case 1 : empty ll
+       if(size == 0){
+        System.out.println("The ll is empty");
+        return Integer.MAX_VALUE;  // returning positive/negative max value as invaild value
+       }
+       // corner case 2 : ll with a single node
+       if(size == 1){
+        int val = head.data;
+        head = tail = null;
+        size = 0;
+        return val;
+       }
+        // general case
+        int val = head.data;
+        head = head.next;
+        size--;
+        return val;
+    }
+
+    public int removeLast(){
+        // corner case 1 : empty ll
+       if(size == 0){
+        System.out.println("The ll is empty");
+        return Integer.MAX_VALUE;  // returning positive/negative max value as invaild value
+       }
+       // corner case 2 : ll with a single node
+       if(size == 1){
+        int val = tail.data;
+        head = tail = null;
+        size = 0;
+        return val;
+       }
+        // prev i : size-2 // prev = previous node
+        Node prev = head;
+        for(int i=0; i<size-2; i++){
+            prev = prev.next;
+        }
+        int val = prev.next.data;  // tail.data
+        prev.next = null;
+        tail = prev;
+        size--;
+        return val;
+    }
+
+    public int iterativeSearch(int key){  // time complexity O(n) or linear time complexity
+        Node temp = head; // making a teemporary node and assigning it to the head
+        int i = 0;
+
+        while(temp != null){
+            if(temp.data == key){  // key found case
+                return i;
+            } 
+        temp = temp.next;
+        i++;
+        }
+        return -1;  // key not found case
+    }
+
+    public int helperFunc(Node head, int key){   // T.C. O(n), linear
+        // base case
+        if(head == null){
+            return -1;
+        }
+        //logic
+        if(head.data == key){
+            return 0;
+        }
+        int idx = helperFunc(head.next, key);
+        if(idx == -1){
+            return -1;
+        }
+    
+        return idx+1;
+    }
+
+    public int recursiveSearch(int key){   // since we can only send key argument here, we take help from a helpeer function
+      return helperFunc(head, key);
+    }
+
+    public void reverseLL(){  // time complexity = O(n);
+        Node prev = null;
+        Node curr = tail = head;  // since we are doing reverse of linkedlist, the head is also tail here.
+        Node next;
+
+        // In Java we always assign right to left. So In Line no 181, head is assigned in tail and then tail is assign in curr.
+        while(curr != null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+
+    }
+
+    public void deleteNthNodefromEnd(int n){
+        // calculate size : here we're already using size variable, but for the sake of future coding completition we're calculating here again.
+        int syz = 0;
+        Node temp = head;
+        while(temp != null){
+            temp = temp.next;
+            syz++;
+        }
+
+        // corner case : remove first node
+        if(n == syz){
+            head = head.next;
+            return;
+        }
+
+        // normal case
+        int idx = 1;
+        int idxToFind = syz-n;
+        Node prev = head;
+
+        while(idx < idxToFind){
+            prev = prev.next;
+            idx++;
+        }
+        
+        prev.next = prev.next.next;
+        return;
+
+    }
+
     public static void main(String args[]) {
         introToLL ll = new introToLL();
         ll.print();
@@ -110,6 +236,25 @@ public class introToLL {
         // printing the linkedlist
         ll.print();
         System.out.println("The total size of the ll is " + size);
+        ll.removeFirst();
+        ll.print();
+        System.out.println("The size of the ll after removing the first node is " + size);
+        ll.removeLast();
+        ll.print();
+        System.out.println("The size of the ll after removing the first node is "+ size);
+        System.out.println(ll.iterativeSearch(3));
+        System.out.println(ll.iterativeSearch(10));
+
+        System.out.println(ll.recursiveSearch(3));
+        System.out.println(ll.recursiveSearch(10));
+
+        // reverse
+        ll.reverseLL();
+        ll.print();
+
+        ll.deleteNthNodefromEnd(2);
+        ll.print();
+
 
     }
 }
