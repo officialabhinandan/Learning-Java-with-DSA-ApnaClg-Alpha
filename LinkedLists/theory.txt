@@ -100,6 +100,40 @@ to the same node. In that case head equals to tail.
    ⚪ Then link the curr node with the prev node (curr.next = prev).
    ⚪ Make prev node the new curr node (prev = curr) and curr node is the new next node (curr = next).
 
-🛑🛑🛑 To delete Nth node from the last of a ll :-
-   ⚪ 
+🛑🛑🛑 To delete Nth node from the last of a ll :-  public void deleteNthNodefromEnd(int n){}
+   ⚪ According to the logic if we have to delete nth node from the end, we have to travel size-n+1 nodes.
+   ⚪ Taking syz variable and calculate the size of the ll and traversing the nodes using a temporary node.
+      Node temp = head;
+        while(temp != null){
+            temp = temp.next;
+            syz++;
+        }
+    ⚪ Now if we have to remove the first element, we do 
+     if(n == syz){
+            head = head.next;
+            return;
+        }
+    ⚪ For normal cases, we do
+        int idx = 1;
+        int idxToFind = syz-n;
+        Node prev = head;
 
+        while(idx < idxToFind){
+            prev = prev.next;
+            idx++;
+        }
+        
+        prev.next = prev.next.next;
+        return;
+
+🛑🛑🛑 Check if ll is a palindrome :-
+    ⚪ It helps us to learn slow-fast concept and reverse of the half part of a ll.
+    ⚪ Step 1: Find middle node, step 2: reverse the 2nd half, step 3: check whether 1st half == 2nd ha;f or not.
+    ⚪ 
+
+
+
+🔴🟠🟡 Slow-fast technique or Turtle-hair technique :- So check whether a ll is palindrome or not we need to find the reverse of the ll first and 
+then we have to reverse the ll after that to compare both the parts. To find the middle node we can calculate the sixe of the node and then we can find
+middle using size/2. otherwise we can also take two points fast and slow. Both the pointers start from the head node. Where slow pointer jumps one
+by one node (+1), the fast one moves with (+2) frequency. Let's make a function to find the middle node of the ll. 

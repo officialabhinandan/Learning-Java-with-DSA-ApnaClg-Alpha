@@ -222,6 +222,53 @@ public class introToLL {
 
     }
 
+    // Slow-fast approach
+    public Node findMidNode(Node head){   // to find the middle node. Kind off helper function in this context
+      Node slow = head;
+      Node fast = head;
+
+      while(fast != null && fast.next != null){
+        slow = slow.next; // +1
+        fast = fast.next.next; // +2
+      }
+      return slow;
+    }
+
+    public boolean checkPalindrome(){
+        // corner case: empty ll
+        if(head == null || head.next == null){
+            return true;
+        }
+        // step 1: find middle node
+        Node miNode = findMidNode(head);
+
+        // step 2: Reverse 2nd half
+        Node prev = null;
+        Node curr = miNode;
+        Node next;
+
+        while(curr != null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        
+        Node right = prev; // right half head
+        Node left = head; // left half head 
+
+        // step 3: compare 1st and 2nd half of the 
+        while(right != null){
+            if(left.data != right.data){
+                return false;
+            }
+            left = left.next;
+            right = right.next;
+        }
+
+        return true;
+    }
+
     public static void main(String args[]) {
         introToLL ll = new introToLL();
         ll.print();
@@ -254,6 +301,15 @@ public class introToLL {
 
         ll.deleteNthNodefromEnd(2);
         ll.print();
+
+        System.out.println(ll.checkPalindrome());
+
+        ll.addLast(2);
+        ll.addLast(3);
+        ll.print();
+        System.out.println(ll.checkPalindrome());
+
+        
 
 
     }
