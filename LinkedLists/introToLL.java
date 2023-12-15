@@ -307,7 +307,7 @@ public class introToLL {
         ll.addLast(2);
         ll.addLast(3);
         ll.print();
-        System.out.println(ll.checkPalindrome());
+        System.out.println(ll.checkPalindrome());  // prints palindrome or not
 
         
 
