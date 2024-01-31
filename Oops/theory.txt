@@ -2,7 +2,7 @@
 
 ⚪ Classes are the group of entities and Objects are the entities in the real world. We can also say that, classes are the logical entities and objects
 are the physical constructs which carry class's attributes and properties.
-⚪ Class is nothing but the blueprint of an object. Classes are consists of attributes/properties(Instance variables) and behaviours/functions.(Instance methods).
+⚪ Class is nothing but the blueprint of an object. Classes are consists of attributes/properties(Instance variables) and behaviours/functions(Instance methods).
 
 ⚪ Create objects in Java:-
 ⚪ As you all know, in Java, a class provides the blueprint for objects, you can create an object from a class. Basically class acts as a container
